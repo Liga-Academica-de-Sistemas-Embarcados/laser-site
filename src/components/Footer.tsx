@@ -1,0 +1,67 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { FiInstagram, FiLinkedin } from 'react-icons/fi';
+import { IconType } from 'react-icons/lib';
+
+interface SocialIconProps {
+  href: string;
+  alt: string;
+  Icon: IconType;
+}
+
+function SocialIcon({ href, alt, Icon }: SocialIconProps) {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={alt}
+      className="flex items-center justify-center rounded-full w-8 h-8 border-[1px] border-background"
+    >
+      <Icon size={15} />
+    </Link>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="relative z-10 bg-solid w-full px-24 pb-10 pt-24">
+      <div className="max-w-[1150px] mx-2 min-[1150px]:mx-auto">
+        <div className="flex flex-col items-center mx-6 mb-6 gap-16">
+          <Image src="/logo.svg" alt="LASER" width={240} height={62} />
+          <div className="flex w-full justify-between">
+            <div className="flex flex-col gap-2">
+              <span className="text-sm leading-6">Contate-nos</span>
+              <Link
+                href="mailto:laser@cin.ufpe.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-extralight leading-6 hover:opacity-85"
+              >
+                laser@cin.ufpe.br
+              </Link>
+            </div>
+            <div className="flex flex-col gap-2 text-right">
+              <span className="text-sm leading-6">Nosso endereço</span>
+              <Link
+                href="https://maps.app.goo.gl/RFfN4eXii5ZSsKoF9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-extralight leading-6 hover:opacity-85"
+              >
+                Av. Jorn. Aníbal Fernandes, s/n - Cidade Universitária,
+                <br />
+                Recife - PE, 50740-560
+              </Link>
+            </div>
+          </div>
+        </div>
+        <hr className="bg-background h-[1px] mb-10" />
+        <div className="flex gap-4 justify-center">
+          <SocialIcon href="https://www.linkedin.com/company/laser-ufpe/" alt="LinkedIn" Icon={FiLinkedin} />
+          <SocialIcon href="https://www.instagram.com/laser.ufpe/" alt="Instagram" Icon={FiInstagram} />
+        </div>
+      </div>
+    </footer>
+  );
+}
