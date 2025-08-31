@@ -1,70 +1,31 @@
-import { ActivitiesGroupCard } from '@/components/ensino/ActivitiesGroupCard';
-import { Header } from '@/components/Header';
+import { ActivitiesGroupCard } from "@/components/ensino/ActivitiesGroupCard";
+import { Header } from "@/components/Header";
+import { getDictionary } from "../dictionaries";
 
-export default function Teaching() {
+export default async function Teaching() {
+  const dict = await getDictionary("pt-BR");
+
   return (
     <main>
       <Header>
-        Atividades{' '}
-        <span className="text-primary">educativas</span>
+        Atividades <span className="text-primary">educativas</span>
       </Header>
       <div className="flex flex-col gap-16 mb-20">
-        <ActivitiesGroupCard solid title="Workshops" activities={[
-          {
-            title: 'Introdução ao Arduino',
-            description: 'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-            durationInHours: 2,
-            imageURL: 'https://placecats.com/800/500',
-            learnMoreURL: '#',
-            level: 'Básico'
-          },
-          {
-            title: 'Atividade 2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            durationInHours: 2,
-            imageURL: 'https://placecats.com/800/500',
-            learnMoreURL: '#',
-            level: 'Básico'
-          }
-        ]} />
-
-        <ActivitiesGroupCard title="Oficinas" activities={[
-          {
-            title: 'Introdução ao Arduino',
-            description: 'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-            durationInHours: 2,
-            imageURL: 'https://placecats.com/800/500',
-            learnMoreURL: '#',
-            level: 'Básico'
-          },
-          {
-            title: 'Atividade 2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            durationInHours: 2,
-            imageURL: 'https://placecats.com/800/500',
-            learnMoreURL: '#',
-            level: 'Básico'
-          }
-        ]} />
-
-        <ActivitiesGroupCard solid title="Palestras" activities={[
-          {
-            title: 'Introdução ao Arduino',
-            description: 'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-            durationInHours: 2,
-            imageURL: 'https://placecats.com/800/500',
-            learnMoreURL: '#',
-            level: 'Básico'
-          },
-          {
-            title: 'Atividade 2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            durationInHours: 2,
-            imageURL: 'https://placecats.com/800/500',
-            learnMoreURL: '#',
-            level: 'Básico'
-          }
-        ]} />
+        {dict.teaching.activities.map((activityGroup, index) => (
+          <ActivitiesGroupCard
+            key={activityGroup["text-title"] + index}
+            solid={index % 2 == 0}
+            title={activityGroup["text-title"]}
+            activities={activityGroup.activities.map((activity) => ({
+              title: activity["text-title"],
+              description: activity["text-description"],
+              durationInHours: activity["text-duration-hours"],
+              level: activity["text-level"],
+              learnMoreURL: activity["link-view-more"],
+              imageURL: activity["image-url"],
+            }))}
+          />
+        ))}
       </div>
     </main>
   );
