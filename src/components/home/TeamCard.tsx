@@ -3,9 +3,12 @@ import { clsx } from 'clsx';
 import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { LinkButton } from '../LinkButton';
 import { MemberCard } from '../MemberCard';
+import { getDictionary } from '@/app/dictionaries';
 
 
-export function TeamCard({ solid }: ContentCardProps) {
+export async function TeamCard({ solid }: ContentCardProps) {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <BaseContentCard
       solid={solid}
@@ -18,29 +21,18 @@ export function TeamCard({ solid }: ContentCardProps) {
         Conheça a <span className="text-primary">equipe</span>
       </h2>
       <div className="flex w-full justify-evenly flex-wrap gap-16 items-center">
-        <MemberCard
-          name="Welton Felix"
-          role="Desenvolvedor"
-          email="welton@laser.com"
-          pictureUrl="https://github.com/weltonfelix.png"
-          variant={solid ? 'light' : 'dark'}
-        />
-        <MemberCard
-          name="Welton Felix"
-          role="Desenvolvedor"
-          email="welton@laser.com"
-          pictureUrl="https://github.com/weltonfelix.png"
-          variant={solid ? 'light' : 'dark'}
-        />
-        <MemberCard
-          name="Welton Felix"
-          role="Desenvolvedor"
-          email="welton@laser.com"
-          pictureUrl="https://github.com/weltonfelix.png"
-          variant={solid ? 'light' : 'dark'}
-        />
+        {dict.home.team.members.map((member, index) => (
+          <MemberCard
+            key={`team-member-${index}`}
+            name={member["text-name"]}
+            role={member["text-role"]}
+            email={member["text-email"]}
+            pictureUrl={member["image-url"]}
+            variant={solid ? 'light' : 'dark'}
+          />
+        ))}
       </div>
-      <LinkButton href="/membros">Ver membros</LinkButton>
+      <LinkButton href="/membros">{dict.home.team["button-view-members"]}</LinkButton>
     </BaseContentCard>
   );
 }

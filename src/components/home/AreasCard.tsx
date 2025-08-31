@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 
 import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
+import { getDictionary } from '@/app/dictionaries';
 
 function AreaChip({ title }: { title: string }) {
   return (
@@ -10,22 +11,21 @@ function AreaChip({ title }: { title: string }) {
   );
 }
 
-export function AreasCard({ solid }: ContentCardProps) {
+export async function AreasCard({ solid }: ContentCardProps) {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <BaseContentCard
       solid={solid}
       className={clsx({ 'text-solid': !solid }, 'flex flex-col md:flex-row gap-8 justify-around items-center py-20')}
     >
-      <h2 className="text-2xl md:text-3xl">Áreas de atuação</h2>
+      <h2 className="text-2xl md:text-3xl">{dict.home.areas["text-title"]}</h2>
       <div className="flex gap-4 flex-wrap justify-around max-w-md">
-        <AreaChip title="Embarcados" />
-        <AreaChip title="Sistemas críticos" />
-        <AreaChip title="Internet das coisas" />
-        <AreaChip title="Automotivo" />
-        <AreaChip title="Segurança" />
-        <AreaChip title="Embarcado" />
-        <AreaChip title="Embarcados" />
-        <AreaChip title="Embarcados" />
+        {
+          dict.home.areas["text-areas"].map((area, index) => (
+            <AreaChip key={`area-${area}-${index}`} title={area} />
+          ))
+        }
       </div>
     </BaseContentCard>
   );
