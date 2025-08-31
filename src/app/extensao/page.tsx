@@ -15,11 +15,6 @@ export default async function Extension() {
       </Header>
       <div className="flex flex-col gap-16 mb-20">
         <ExtensionProjectsGroupCard
-          title={
-            <>
-              Projetos de <span className="text-primary">competições</span>
-            </>
-          }
           projects={
             dict.extension.projects.map((project) => (
               {

@@ -6,7 +6,6 @@ import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { getDictionary } from '@/app/dictionaries';
 
 interface ExtensionProjectsGroupCardProps extends ContentCardProps {
-  title: React.ReactNode;
   projects: Omit<ExtensionProjectCardProps, 'variant'>[];
 }
 
