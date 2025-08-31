@@ -8,7 +8,7 @@ export default function Teaching() {
         Atividades{' '}
         <span className="text-primary">educativas</span>
       </Header>
-      <div className="flex flex-col gap-4 mb-20">
+      <div className="flex flex-col gap-16 mb-20">
         <ActivitiesGroupCard solid title="Workshops" activities={[
           {
             title: 'Introdução ao Arduino',

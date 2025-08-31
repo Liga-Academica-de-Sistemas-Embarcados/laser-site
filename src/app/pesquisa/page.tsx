@@ -11,7 +11,7 @@ e dentro do nosso próprio laboratório de ideias."
       >
         <span className="text-primary">Pesquisa</span> e Inovação
       </Header>
-      <div className="flex flex-col gap-4 mb-20">
+      <div className="flex flex-col gap-16 mb-20">
         <ProjectsGroupCard
           solid
           title={

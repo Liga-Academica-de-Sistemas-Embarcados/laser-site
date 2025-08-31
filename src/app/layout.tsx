@@ -26,9 +26,9 @@ export default function RootLayout({
       <body className={`${lexend.variable} antialiased bg-main`}>
         <div className="relative z-10 max-w-[1150px] mx-2 min-[1150px]:mx-auto">
           <Navbar />
-          <main className="mt-10">
+          <div className="mt-10">
             {children}
-          </main>
+          </div>
         </div>
         <Footer />
       </body>

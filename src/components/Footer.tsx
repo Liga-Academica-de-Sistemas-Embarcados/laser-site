@@ -25,11 +25,11 @@ function SocialIcon({ href, alt, Icon }: SocialIconProps) {
 
 export function Footer() {
   return (
-    <footer className="relative z-10 bg-solid w-full px-24 pb-10 pt-24">
-      <div className="max-w-[1150px] mx-2 min-[1150px]:mx-auto">
-        <div className="flex flex-col items-center mx-6 mb-6 gap-16">
-          <Image src="/logo.svg" alt="LASER" width={240} height={62} />
-          <div className="flex w-full justify-between">
+    <footer className="relative bg-solid w-full px-6 md:px-24 pb-10 pt-24">
+      <div className="max-w-[1150px] min-[1150px]:mx-auto">
+        <div className="flex flex-col items-center mx-4 md:mx-6 mb-6 gap-16">
+          <Image src="/logo.svg" alt="LASER" width={240} height={62} className='w-28 md:w-60' />
+          <div className="flex w-full gap-2 justify-between">
             <div className="flex flex-col gap-2">
               <span className="text-sm leading-6">Contate-nos</span>
               <Link

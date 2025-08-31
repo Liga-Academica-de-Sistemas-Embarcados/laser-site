@@ -11,7 +11,7 @@ export default function Home() {
         Liga Acadêmica de{' '}
         <span className="text-primary">Sistemas Embarcados</span>
       </Header>
-      <div className="flex flex-col gap-4 mb-20">
+      <div className="flex flex-col gap-16 mb-20">
         <AboutUsCard solid />
         <AreasCard />
         <TeamCard solid />

@@ -9,7 +9,7 @@ export default function Teaching() {
         Conheça a{' '}
         <span className="text-primary">equipe</span>
       </Header>
-      <div className="flex flex-col gap-8 mb-20">
+      <div className="flex flex-col gap-16 mb-20">
         <MembersGroupCard solid title="Membros Atuais" members={[
           {
             name: 'Welton Felix',
