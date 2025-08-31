@@ -1,0 +1,177 @@
+{
+  "footer": {
+    "text-contact-us": "Contate-nos",
+    "text-our-address": "Nosso endereço",
+    "text-copyright": "Liga Acadêmica de Sistemas Embarcados da UFPE - LASER",
+    "social": {
+      "link-linkedin": "https://www.linkedin.com/company/laser-ufpe/",
+      "link-instagram": "https://www.instagram.com/laser.ufpe/"
+    }
+  },
+  "home": {
+    "about-us": {
+      "text-title": "Sobre nós",
+      "text-content": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+    },
+    "areas": {
+      "text-title": "Áreas de atuação",
+      "text-areas": [
+        "Embarcados",
+        "Sistemas críticos",
+        "Internet das coisas",
+        "Automotivo",
+        "Segurança",
+        "Embarcado",
+        "Embarcados",
+        "Embarcados"
+      ]
+    },
+    "team": {
+      "members": [
+        {
+          "text-name": "Welton Felix",
+          "text-role": "Desenvolvedor",
+          "text-email": "welton@laser.com",
+          "image-url": "https://github.com/weltonfelix.png"
+        },
+        {
+          "text-name": "Welton Felix",
+          "text-role": "Desenvolvedor",
+          "text-email": "welton@laser.com",
+          "image-url": "https://github.com/weltonfelix.png"
+        },
+        {
+          "text-name": "Welton Felix",
+          "text-role": "Desenvolvedor",
+          "text-email": "welton@laser.com",
+          "image-url": "https://github.com/weltonfelix.png"
+        }
+      ],
+      "button-view-members": "Ver membros"
+    },
+    "projects": {
+      "text-title": "Nossos projetos"
+    }
+  },
+  "teaching": {
+    "button-view-more-activity": "Saiba mais",
+    "text-level": "Nível",
+    "alt-activity-image": "Imagem representativa da atividade",
+    "activities": [
+      {
+        "text-title": "Workshops",
+        "activities": [
+          {
+            "text-title": "Introdução ao Arduino",
+            "image-url": "https://placecats.com/800/500",
+            "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
+            "text-duration-hours": 2,
+            "text-level": "Básico",
+            "link-view-more": "#"
+          }
+        ]
+      },
+      {
+        "text-title": "Oficinas",
+        "activities": [
+          {
+            "text-title": "Introdução ao Arduino",
+            "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
+            "text-duration-hours": 2,
+            "image-url": "https://placecats.com/800/500",
+            "text-level": "Básico",
+            "link-view-more": "#"
+          }
+        ]
+      },
+      {
+        "text-title": "Palestras",
+        "activities": [
+          {
+            "text-title": "Introdução ao Arduino",
+            "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
+            "text-duration-hours": 2,
+            "text-level": "Básico",
+            "image-url": "https://placecats.com/800/500",
+            "link-view-more": "#"
+          }
+        ]
+      }
+    ]
+  },
+  "research": {
+    "text-description": "Conheça os projetos que movem a Liga: em competições e dentro do nosso próprio laboratório de ideias.",
+    "alt-project-image-base": "Imagem representativa do projeto",
+    "contests": {
+      "projects": [
+        {
+          "text-title": "Introdução ao Arduino",
+          "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
+          "text-contest-name": "Competição X",
+          "text-year": "2025",
+          "image-url": "https://placecats.com/800/500"
+        }
+      ]
+    },
+    "internal": {
+      "projects": [
+        {
+          "text-title": "Introdução ao Arduino",
+          "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
+          "text-event": "Competição X",
+          "text-year": "2025",
+          "image-url": "https://placecats.com/800/500"
+        }
+      ]
+    },
+    "collaborate": {
+      "text-title": "Quer colaborar com a pesquisa?",
+      "text-description": "Entre em contato conosco e ajude a expandir os horizontes dos sistemas embarcados.",
+      "button-cta": "laser@cin.ufpe.br",
+      "button-email": "laser@cin.ufpe.br"
+    }
+  },
+  "extension": {
+    "text-description": "Projetos, ações e eventos para divulgar sistemas embarcados ao público externo à UFPE.",
+    "alt-project-image-base": "Imagem representativa do projeto",
+    "projects": [
+      {
+        "text-title": "Introdução ao Arduino",
+        "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
+        "text-location": "Competição X",
+        "text-date": "2025",
+        "image-url": "https://placecats.com/800/500"
+      }
+    ],
+    "contact-us": {
+      "text-title": "Quer levar a Laser para seu evento?",
+      "text-description": "Entre em contato para agendar oficinas, exposições ou visitas técnicas.",
+      "button-cta": "laser@cin.ufpe.br",
+      "button-email": "laser@cin.ufpe.br"
+    }
+  },
+  "members": {
+    "current": {
+      "text-title": "Membros atuais",
+      "items": [
+        {
+          "text-name": "Welton Felix",
+          "text-role": "Desenvolvedor",
+          "text-email": "welton@laser.com",
+          "image-url": "https://github.com/weltonfelix.png"
+        }
+      ]
+    },
+    "alumni": {
+      "text-title": "Alumni",
+      "items": [
+        {
+          "text-name": "Welton Felix",
+          "text-role": "Desenvolvedor",
+          "text-email": "welton@laser.com",
+          "image-url": "https://github.com/weltonfelix.png"
+        }
+      ]
+    }
+  }
+}
