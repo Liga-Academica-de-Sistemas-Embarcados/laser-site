@@ -4,6 +4,7 @@ import { FiClock } from 'react-icons/fi';
 
 import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { LinkButton } from '../LinkButton';
+import { getDictionary } from '@/app/dictionaries';
 
 interface ActivitiesGroupCardProps extends ContentCardProps {
   title: string;
@@ -20,12 +21,14 @@ interface ActivityCardProps {
   variant?: 'light' | 'dark';
 }
 
-function ActivityCard({ title, description, durationInHours, level, learnMoreURL, imageURL, variant='dark' }: ActivityCardProps) {
+async function ActivityCard({ title, description, durationInHours, level, learnMoreURL, imageURL, variant='dark' }: ActivityCardProps) {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <div className="flex flex-col max-w-2xl gap-8">
       <Image
         src={imageURL}
-        alt={`Imagem representativa da atividade ${title}`}
+        alt={`${dict.teaching['alt-activity-image']} ${title}`}
         width={768}
         height={288}
         style={{
@@ -41,16 +44,16 @@ function ActivityCard({ title, description, durationInHours, level, learnMoreURL
             <FiClock size={18} />
             <span>{durationInHours}h&nbsp;·&nbsp;</span>
           </div>
-          <span className='inline-block'>Nível: {level}</span>
+          <span className='inline-block'>{dict.teaching["text-level"]}: {level}</span>
         </div>
         <hr className={clsx(variant == 'dark' ? 'border-foreground-dark' : 'border-solid-light', "h-px my-2 md:my-0")} />
-        <LinkButton href={learnMoreURL} className="w-fit px-8">Saiba mais</LinkButton>
+        <LinkButton href={learnMoreURL} className="w-fit px-8">{dict.teaching["button-view-more-activity"]}</LinkButton>
       </div>
     </div>
   );
 }
 
-export function ActivitiesGroupCard({
+export async function ActivitiesGroupCard({
   solid,
   title,
   activities
