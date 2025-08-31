@@ -4,6 +4,8 @@ import { Lexend } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
 
+import { getDictionary } from './dictionaries';
+
 import './globals.css';
 
 const lexend = Lexend({
@@ -11,9 +13,12 @@ const lexend = Lexend({
   subsets: ['latin'],
 });
 
+const dict = await getDictionary('pt-BR');
+
 export const metadata: Metadata = {
-  title: 'LASER - CIn',
-  description: 'Liga Acadêmica de Sistemas Embarcados do CIn - UFPE',
+  title: dict.metadata.title,
+  description: dict.metadata.description,
+  keywords: dict.metadata.keywords,
 };
 
 export default async function RootLayout({

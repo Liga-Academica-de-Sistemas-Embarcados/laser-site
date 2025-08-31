@@ -1,4 +1,9 @@
 {
+  "metadata": {
+    "title": "LASER - UFPE",
+    "description": "A Liga Acadêmica de Sistemas Embarcados da UFPE - LASER é um grupo de estudantes dedicados ao estudo e desenvolvimento de sistemas embarcados.",
+    "keywords": "LASER, UFPE, sistemas embarcados, liga acadêmica, CIn, Centro de Informática"
+  },
   "footer": {
     "text-contact-us": "Contate-nos",
     "text-our-address": "Nosso endereço",
