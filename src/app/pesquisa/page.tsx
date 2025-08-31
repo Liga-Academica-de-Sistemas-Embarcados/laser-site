@@ -2,7 +2,11 @@ import { Header } from '@/components/Header';
 import { ProjectsGroupCard } from '@/components/pesquisa/ProjectsGroupCard';
 import { ResearchContactUsCard } from '@/components/pesquisa/ResearchContactUsCard';
 
-export default function Research() {
+import { getDictionary } from '../dictionaries';
+
+export default async function Research() {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <main>
       <Header
@@ -19,32 +23,15 @@ e dentro do nosso próprio laboratório de ideias."
               Projetos de <span className="text-primary">competições</span>
             </>
           }
-          projects={[
-            {
-              title: 'Introdução ao Arduino',
-              description:
-                'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-              eventName: 'Competição X',
-              year: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-            {
-              title: 'Introdução ao Arduino',
-              description:
-                'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-              eventName: 'Competição X',
-              year: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-            {
-              title: 'Atividade 2',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              eventName: 'Competição X',
-              year: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-          ]}
+          projects={
+            dict.research.contests.projects.map((project) => ({
+              title: project["text-title"],
+              description: project["text-description"],
+              eventName: project["text-contest-name"],
+              year: project["text-year"],
+              imageURL: project["image-url"],
+            }))
+          }
         />
 
         <ProjectsGroupCard
@@ -53,24 +40,13 @@ e dentro do nosso próprio laboratório de ideias."
               Projetos <span className="text-primary">internos</span>
             </>
           }
-          projects={[
-            {
-              title: 'Introdução ao Arduino',
-              description:
-                'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-              eventName: 'Competição X',
-              year: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-            {
-              title: 'Atividade 2',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              eventName: 'Competição X',
-              year: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-          ]}
+          projects={dict.research.internal.projects.map((project) => ({
+              title: project["text-title"],
+              description: project["text-description"],
+              eventName: project["text-event"],
+              year: project["text-year"],
+              imageURL: project["image-url"],
+            }))}
         />
         <ResearchContactUsCard  />
       </div>
