@@ -2,8 +2,11 @@ import { clsx } from 'clsx';
 
 import { BaseContentCard } from '../BaseContentCard';
 import { LinkButton } from '../LinkButton';
+import { getDictionary } from '@/app/dictionaries';
 
-export function ResearchContactUsCard({ solid }: { solid?: boolean }) {
+export async function ResearchContactUsCard({ solid }: { solid?: boolean }) {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <BaseContentCard
       solid={solid}
@@ -12,14 +15,13 @@ export function ResearchContactUsCard({ solid }: { solid?: boolean }) {
         'flex flex-col gap-6 items-center justify-center'
       )}
     >
-      <h2 className="text-2xl md:text-3xl w-fit text-center">Quer colaborar com a pesquisa?</h2>
+      <h2 className="text-2xl md:text-3xl w-fit text-center">{dict.research.collaborate["text-title"]}</h2>
       <div className="flex flex-col items-center justify-center flex-wrap gap-8">
         <p className="md:text-lg text-center">
-          Entre em contato conosco e ajude a expandir os horizontes dos sistemas
-          embarcados.
+          {dict.research.collaborate["text-description"]}
         </p>
-        <LinkButton href="mailto:laser@cin.ufpe.br" className='w-fit'>
-          laser@cin.ufpe.br
+        <LinkButton href={"mailto:" + dict.research.collaborate["button-email"]} className='w-fit'>
+          {dict.research.collaborate["button-cta"]}
         </LinkButton>
       </div>
     </BaseContentCard>

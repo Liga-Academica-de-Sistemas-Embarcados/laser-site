@@ -2,6 +2,7 @@ import { clsx } from 'clsx';
 import Image from 'next/image';
 
 import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
+import { getDictionary } from '@/app/dictionaries';
 
 interface ProjectsGroupCardProps extends ContentCardProps {
   title: React.ReactNode;
@@ -18,12 +19,14 @@ interface ProjectCardProps {
   variant?: 'light' | 'dark';
 }
 
-function ProjectCard({ title, description, imageURL, eventName, year, variant='dark' }: ProjectCardProps) {
+async function ProjectCard({ title, description, imageURL, eventName, year, variant='dark' }: ProjectCardProps) {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <div className="flex flex-col w-full md:max-w-72 gap-6">
       <Image
         src={imageURL}
-        alt={`Imagem representativa do projeto ${title}`}
+        alt={`${dict.research['alt-project-image-base']} ${title}`}
         width={288}
         height={144}
         style={{
