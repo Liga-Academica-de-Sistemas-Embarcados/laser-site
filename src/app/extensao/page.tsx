@@ -1,12 +1,15 @@
 import { ExtensionContactUsCard } from '@/components/extensao/ExtensionContactUsCard';
 import { ExtensionProjectsGroupCard } from '@/components/extensao/ExtensionProjectsGroupCard';
 import { Header } from '@/components/Header';
+import { getDictionary } from '../dictionaries';
 
-export default function Extension() {
+export default async function Extension() {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <main>
       <Header
-        description="Projetos, ações e eventos para divulgar sistemas embarcados ao público externo à UFPE."
+        description={dict.extension["text-description"]}
       >
         Projetos de <span className="text-primary">Extensão</span>
       </Header>
@@ -17,40 +20,17 @@ export default function Extension() {
               Projetos de <span className="text-primary">competições</span>
             </>
           }
-          projects={[
-            {
-              title: 'Introdução ao Arduino',
-              description:
-                'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-              location: 'Competição X',
-              date: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-            {
-              title: 'Introdução ao Arduino',
-              description:
-                'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-              location: 'Competição X',
-              date: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-            {
-              title: 'Introdução ao Arduino',
-              description:
-                'Aprenda os fundamentos do Arduino e como criar projetos simples.',
-              location: 'Competição X',
-              date: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-            {
-              title: 'Atividade 2',
-              description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-              location: 'Competição X',
-              date: '2023',
-              imageURL: 'https://placecats.com/800/500',
-            },
-          ]}
+          projects={
+            dict.extension.projects.map((project) => (
+              {
+                title: project["text-title"],
+                description: project["text-description"],
+                location: project["text-location"],
+                date: project["text-date"],
+                imageURL: project["image-url"],
+              }
+            ))
+          }
         />
         <ExtensionContactUsCard  />
       </div>
