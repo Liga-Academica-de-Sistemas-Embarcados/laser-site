@@ -1,6 +1,7 @@
-import Image from 'next/image';
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { clsx } from 'clsx';
+import Image from 'next/image';
+
+import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 
 interface ProjectsGroupCardProps extends ContentCardProps {
   title: React.ReactNode;

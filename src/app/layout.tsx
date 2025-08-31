@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Lexend } from 'next/font/google';
-import './globals.css';
-import { Navbar } from '@/components/Navbar';
+
 import { Footer } from '@/components/Footer';
-import Image from 'next/image';
-import background from '@/../public/background.png';
+import { Navbar } from '@/components/Navbar';
+
+import './globals.css';
 
 const lexend = Lexend({
   variable: '--font-lexend',

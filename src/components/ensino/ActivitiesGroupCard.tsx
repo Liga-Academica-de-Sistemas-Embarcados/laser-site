@@ -1,7 +1,8 @@
-import Image from 'next/image';
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { clsx } from 'clsx';
+import Image from 'next/image';
 import { FiClock } from 'react-icons/fi';
+
+import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { LinkButton } from '../LinkButton';
 
 interface ActivitiesGroupCardProps extends ContentCardProps {

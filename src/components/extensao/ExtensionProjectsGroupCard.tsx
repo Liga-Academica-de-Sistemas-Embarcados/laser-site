@@ -1,7 +1,8 @@
-import Image from 'next/image';
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { clsx } from 'clsx';
+import Image from 'next/image';
 import { FiCalendar, FiMapPin } from 'react-icons/fi';
+
+import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 
 interface ExtensionProjectsGroupCardProps extends ContentCardProps {
   title: React.ReactNode;

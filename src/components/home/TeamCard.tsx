@@ -1,5 +1,6 @@
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { clsx } from 'clsx';
+
+import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { LinkButton } from '../LinkButton';
 import { MemberCard } from '../MemberCard';
 

@@ -1,5 +1,6 @@
-import { BaseContentCard } from '../BaseContentCard';
 import { clsx } from 'clsx';
+
+import { BaseContentCard } from '../BaseContentCard';
 import { LinkButton } from '../LinkButton';
 
 export function ExtensionContactUsCard({ solid }: { solid?: boolean }) {

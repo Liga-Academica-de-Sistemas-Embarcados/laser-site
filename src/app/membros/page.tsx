@@ -1,4 +1,3 @@
-import { ActivitiesGroupCard } from '@/components/ensino/ActivitiesGroupCard';
 import { Header } from '@/components/Header';
 import { MembersGroupCard } from '@/components/membros/MemberGroupCard';
 

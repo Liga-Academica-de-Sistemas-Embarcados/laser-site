@@ -1,5 +1,6 @@
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { clsx } from 'clsx';
+
+import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import { MemberCard, MemberCardProps } from '../MemberCard';
 
 interface MembersGroupCardProps extends ContentCardProps {
