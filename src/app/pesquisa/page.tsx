@@ -1,11 +1,11 @@
-import { Header } from '@/components/Header';
-import { ProjectsGroupCard } from '@/components/pesquisa/ProjectsGroupCard';
-import { ResearchContactUsCard } from '@/components/pesquisa/ResearchContactUsCard';
+import { Header } from "@/components/Header";
+import { ProjectsGroupCard } from "@/components/pesquisa/ProjectsGroupCard";
+import { ResearchContactUsCard } from "@/components/pesquisa/ResearchContactUsCard";
 
-import { getDictionary } from '../dictionaries';
+import { getDictionary } from "../dictionaries";
 
 export default async function Research() {
-  const dict = await getDictionary('pt-BR');
+  const dict = await getDictionary("pt-BR");
 
   return (
     <main>
