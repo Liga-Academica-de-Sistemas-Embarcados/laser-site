@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { FiCalendar, FiMapPin } from 'react-icons/fi';
 
 import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
+import { getDictionary } from '@/app/dictionaries';
 
 interface ExtensionProjectsGroupCardProps extends ContentCardProps {
   title: React.ReactNode;
@@ -19,12 +20,14 @@ interface ExtensionProjectCardProps {
   variant?: 'light' | 'dark';
 }
 
-function ExtensionProjectCard({ title, description, imageURL, location, date, variant='dark' }: ExtensionProjectCardProps) {
+async function ExtensionProjectCard({ title, description, imageURL, location, date, variant='dark' }: ExtensionProjectCardProps) {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <div className={clsx(variant == 'dark' && "bg-solid text-foreground","flex flex-col w-full md:max-w-80 gap-6 p-6 rounded-4xl h-full")}>
       <Image
         src={imageURL}
-        alt={`Imagem representativa do projeto ${title}`}
+        alt={`${dict.extension["alt-project-image-base"]} ${title}`}
         width={288}
         height={144}
         style={{
