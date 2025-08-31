@@ -12,7 +12,7 @@ export interface MemberCardProps {
 
 export function MemberCard({ name, role, email, pictureUrl, variant = 'light' }: MemberCardProps) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-48 md:w-56">
       <Image
         src={pictureUrl}
         width={216}
