@@ -10,8 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-lexend);
   /* --font-mono: var(--font-geist-mono); */
+  --color-background-darker: #FBFBFB;
   --color-solid: #1E1E1E;
   --color-solid-light: #666666;
+  --color-solid-lighter: #FFFFFF26;
   --color-foreground-dark: #A5A5A5;
   --color-primary: #F77F00;
   --color-primary-light: #EAE2B7;
@@ -30,6 +32,10 @@ body {
   font-family: Lexend, Arial, Helvetica, sans-serif;
 }
 
+body:has([data-sidebar-open="true"]) {
+  overflow: hidden;
+}
+
 .bg-main {
   background-image: url('/background.png');
   background-size: auto 2164px;
@@ -37,4 +43,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-main {
+    background-size: 1000px auto;
+    background-position: center calc(0% + 64px);
+  }
 }
