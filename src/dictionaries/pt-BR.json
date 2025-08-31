@@ -36,7 +36,34 @@
       "button-view-members": "Ver membros"
     },
     "projects": {
-      "text-title": "Nossos projetos"
+      "text-title": "Nossos projetos",
+      "items": [
+          {
+            "alt-title": "Projeto 1",
+            "image-url": "https://placecats.com/500/500",
+            "link-url": "/extensao"
+          },
+          {
+            "alt-title": "Projeto 2",
+            "image-url": "https://placecats.com/500/500",
+            "link-url": "/extensao"
+          },
+          {
+            "alt-title": "Projeto 3",
+            "image-url": "https://placecats.com/500/500",
+            "link-url": "/extensao"
+          },
+          {
+            "alt-title": "Projeto 4",
+            "image-url": "https://placecats.com/500/500",
+            "link-url": "/extensao"
+          },
+          {
+            "alt-title": "Projeto 5",
+            "image-url": "https://placecats.com/500/500",
+            "link-url": "/pesquisa"
+          }
+      ]
     }
   },
   "teaching": {
