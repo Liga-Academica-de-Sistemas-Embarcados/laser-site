@@ -32,26 +32,7 @@
       ]
     },
     "team": {
-      "members": [
-        {
-          "text-name": "Welton Felix",
-          "text-role": "Desenvolvedor",
-          "text-email": "welton@laser.com",
-          "image-url": "https://github.com/weltonfelix.png"
-        },
-        {
-          "text-name": "Welton Felix",
-          "text-role": "Desenvolvedor",
-          "text-email": "welton@laser.com",
-          "image-url": "https://github.com/weltonfelix.png"
-        },
-        {
-          "text-name": "Welton Felix",
-          "text-role": "Desenvolvedor",
-          "text-email": "welton@laser.com",
-          "image-url": "https://github.com/weltonfelix.png"
-        }
-      ],
+      "random-members-amount": 3,
       "button-view-members": "Ver membros"
     },
     "projects": {
