@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: 'Liga Acadêmica de Sistemas Embarcados do CIn - UFPE',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
