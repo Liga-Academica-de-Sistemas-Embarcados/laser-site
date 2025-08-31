@@ -1,32 +1,46 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
+import { BaseContentCard, ContentCardProps } from "../BaseContentCard";
+import Image from "next/image";
+import { getDictionary } from "@/app/dictionaries";
+import Link from "next/link";
 
-function ProjectChip() {
+interface ProjectChipProps {
+  alt: string;
+  src: string;
+  url: string;
+}
+function ProjectChip({ alt, src, url }: ProjectChipProps) {
   return (
-    <div className="flex items-center justify-center bg-primary-light px-2 w-24 h-24 rounded-full"></div>
+    <Link href={url}>
+      <Image alt={alt} src={src} width={96} height={96} className="flex items-center object-cover  justify-center w-24 h-24 rounded-full" />
+    </Link>
   );
 }
 
-export function ProjectsCard({ solid }: ContentCardProps) {
+export async function ProjectsCard({ solid }: ContentCardProps) {
+  const dict = await getDictionary("pt-BR");
+
   return (
     <BaseContentCard
       solid={solid}
       className={clsx(
-        { 'text-solid': !solid },
-        'flex flex-col md:flex-row gap-8 justify-around items-center'
+        { "text-solid": !solid },
+        "flex flex-col md:flex-row gap-8 justify-around items-center"
       )}
     >
       <h2 className="text-2xl md:text-3xl">Nossos Projetos</h2>
       <div className="flex gap-4 flex-wrap justify-around max-w-md">
-        <ProjectChip />
-        <ProjectChip />
-        <ProjectChip />
-        <ProjectChip />
-        <ProjectChip />
-        <ProjectChip />
-        <ProjectChip />
-        <ProjectChip />
+        {
+          dict.home.projects.items.map((project, index) => (
+            <ProjectChip
+              key={`project-chip-${index}`}
+              alt={project["alt-title"]}
+              src={project["image-url"]}
+              url={project["link-url"]}
+            />
+          ))
+        }
       </div>
     </BaseContentCard>
   );
