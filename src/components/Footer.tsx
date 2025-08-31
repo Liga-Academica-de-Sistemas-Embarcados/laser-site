@@ -1,3 +1,4 @@
+import { getDictionary } from '@/app/dictionaries';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiInstagram, FiLinkedin } from 'react-icons/fi';
@@ -23,7 +24,9 @@ function SocialIcon({ href, alt, Icon }: SocialIconProps) {
   );
 }
 
-export function Footer() {
+export async  function Footer() {
+  const dict = await getDictionary('pt-BR');
+
   return (
     <footer className="relative bg-solid w-full px-6 md:px-24 pb-10 pt-24">
       <div className="max-w-[1150px] min-[1150px]:mx-auto">
@@ -31,7 +34,7 @@ export function Footer() {
           <Image src="/logo.svg" alt="LASER" width={240} height={62} className='w-28 md:w-60' />
           <div className="flex w-full gap-2 justify-between">
             <div className="flex flex-col gap-2">
-              <span className="text-sm leading-6">Contate-nos</span>
+              <span className="text-sm leading-6">{dict.footer['text-contact-us']}</span>
               <Link
                 href="mailto:laser@cin.ufpe.br"
                 target="_blank"
@@ -42,7 +45,7 @@ export function Footer() {
               </Link>
             </div>
             <div className="flex flex-col gap-2 text-right">
-              <span className="text-sm leading-6">Nosso endereço</span>
+              <span className="text-sm leading-6">{dict.footer['text-our-address']}</span>
               <Link
                 href="https://maps.app.goo.gl/RFfN4eXii5ZSsKoF9"
                 target="_blank"
@@ -58,9 +61,10 @@ export function Footer() {
         </div>
         <hr className="bg-background h-[1px] mb-10" />
         <div className="flex gap-4 justify-center">
-          <SocialIcon href="https://www.linkedin.com/company/laser-ufpe/" alt="LinkedIn" Icon={FiLinkedin} />
-          <SocialIcon href="https://www.instagram.com/laser.ufpe/" alt="Instagram" Icon={FiInstagram} />
+          <SocialIcon href={dict.footer.social['link-linkedin']} alt="LinkedIn" Icon={FiLinkedin} />
+          <SocialIcon href={dict.footer.social['link-instagram']} alt="Instagram" Icon={FiInstagram} />
         </div>
+        <span className="mt-6 block text-center text-sm font-extralight leading-6">Copyright &copy; {new Date().getFullYear()} {dict.footer['text-copyright']}</span>
       </div>
     </footer>
   );
