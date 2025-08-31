@@ -15,12 +15,12 @@ export function MembersGroupCard({
   return (
     <BaseContentCard
       solid={solid}
-      className={clsx({ 'text-solid': !solid }, 'flex flex-col gap-12')}
+      className={clsx({ 'text-solid': !solid }, 'flex flex-col gap-8 md:gap-12')}
     >
-      <h2 className="text-3xl border-b-2 border-primary w-fit pb-2 px-2">
+      <h2 className="text-2xl md:text-3xl border-b-2 border-primary w-fit pb-2 px-2">
         {title}
       </h2>
-      <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14">
+      <div className="grid justify-center min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14">
         {
           members.map((member, index) => (
             <MemberCard

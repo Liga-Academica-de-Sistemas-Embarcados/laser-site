@@ -13,10 +13,10 @@ export function TeamCard({ solid }: ContentCardProps) {
         'flex flex-col items-center gap-14'
       )}
     >
-      <h2 className="text-3xl">
+      <h2 className="text-2xl md:text-3xl">
         Conheça a <span className="text-primary">equipe</span>
       </h2>
-      <div className="flex w-full justify-evenly items-center">
+      <div className="flex w-full justify-evenly flex-wrap gap-16 items-center">
         <MemberCard
           name="Welton Felix"
           role="Desenvolvedor"

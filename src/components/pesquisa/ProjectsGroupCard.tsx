@@ -28,7 +28,7 @@ function ProjectCard({ title, description, imageURL, eventName, year, variant='d
         style={{
           objectFit: 'cover',
         }}
-        className="rounded-3xl w-full md:w-72 h-64 md:h-36"
+        className="rounded-3xl w-full md:w-72 h-40 md:h-36"
       />
       <div className='flex flex-col gap-2'>
         <h3 className='text-lg'>{title}</h3>
@@ -47,9 +47,9 @@ export function ProjectsGroupCard({
   return (
     <BaseContentCard
       solid={solid}
-      className={clsx({ 'text-solid': !solid }, 'flex flex-col gap-12')}
+      className={clsx({ 'text-solid': !solid }, 'flex flex-col gap-8 md:gap-12')}
     >
-      <h2 className="text-3xl w-fit">
+      <h2 className="text-2xl md:text-3xl w-fit">
         {title}
       </h2>
       <div className="flex justify-around items-start flex-wrap gap-8">

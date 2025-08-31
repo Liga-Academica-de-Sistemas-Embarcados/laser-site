@@ -18,7 +18,7 @@ export function MemberCard({ name, role, email, pictureUrl, variant = 'light' }:
         width={216}
         height={216}
         alt={`Foto de ${name}, ${role} na LASER`}
-        className="rounded-3xl"
+        className="rounded-3xl w-48 md:w-56"
       />
       <div className="flex flex-col gap-4 font-light">
         <div className="flex flex-col gap-1">
@@ -31,7 +31,7 @@ export function MemberCard({ name, role, email, pictureUrl, variant = 'light' }:
               'text-solid bg-background': variant === 'light',
               'text-foreground bg-solid font-normal': variant === 'dark',
             },
-            'flex gap-2 text-sm px-2 py-1 items-center rounded-full w-fit'
+            'flex gap-2 text-xs md:text-sm px-2 py-1 items-center rounded-full w-fit'
           )}
         >
           <FiMail size={18} />

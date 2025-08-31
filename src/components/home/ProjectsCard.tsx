@@ -1,5 +1,6 @@
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 import clsx from 'clsx';
+
+import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
 
 function ProjectChip() {
   return (
@@ -13,10 +14,10 @@ export function ProjectsCard({ solid }: ContentCardProps) {
       solid={solid}
       className={clsx(
         { 'text-solid': !solid },
-        'flex gap-4 justify-around items-center'
+        'flex flex-col md:flex-row gap-8 justify-around items-center'
       )}
     >
-      <h2 className="text-3xl">Nossos Projetos</h2>
+      <h2 className="text-2xl md:text-3xl">Nossos Projetos</h2>
       <div className="flex gap-4 flex-wrap justify-around max-w-md">
         <ProjectChip />
         <ProjectChip />

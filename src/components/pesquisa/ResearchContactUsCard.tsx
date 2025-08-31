@@ -8,12 +8,12 @@ export function ResearchContactUsCard({ solid }: { solid?: boolean }) {
       solid={solid}
       className={clsx(
         { 'text-solid': !solid },
-        'flex flex-col gap-6 items-center'
+        'flex flex-col gap-6 items-center justify-center'
       )}
     >
-      <h2 className="text-3xl w-fit">Quer colaborar com a pesquisa?</h2>
-      <div className="flex flex-col items-center flex-wrap gap-2">
-        <p className="text-lg text-center">
+      <h2 className="text-2xl md:text-3xl w-fit text-center">Quer colaborar com a pesquisa?</h2>
+      <div className="flex flex-col items-center justify-center flex-wrap gap-8">
+        <p className="md:text-lg text-center">
           Entre em contato conosco e ajude a expandir os horizontes dos sistemas
           embarcados.
         </p>
