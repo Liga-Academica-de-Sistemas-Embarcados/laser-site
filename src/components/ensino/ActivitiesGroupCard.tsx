@@ -18,36 +18,72 @@ interface ActivityCardProps {
   level: string;
   learnMoreURL: string;
   imageURL: string;
-  variant?: 'light' | 'dark';
+  variant?: "light" | "dark";
 }
 
-async function ActivityCard({ title, description, durationInHours, level, learnMoreURL, imageURL, variant='dark' }: ActivityCardProps) {
-  const dict = await getDictionary('pt-BR');
+async function ActivityCard({
+  title,
+  description,
+  durationInHours,
+  level,
+  learnMoreURL,
+  imageURL,
+  variant = "dark",
+}: ActivityCardProps) {
+  const dict = await getDictionary("pt-BR");
 
   return (
     <div className="flex flex-col max-w-2xl gap-8">
-      <Image
-        src={imageURL}
-        alt={`${dict.teaching['alt-activity-image']} ${title}`}
-        width={768}
-        height={288}
-        style={{
-          objectFit: 'cover',
-        }}
-        className="rounded-3xl w-3xl h-40 md:h-72"
-      />
-      <div className='flex flex-col gap-2 md:gap-4'>
-        <h3 className='text-lg md:text-2xl'>{title}</h3>
-        <p className={clsx(variant == 'dark' ? 'text-foreground-dark' : 'text-solid-light')}>{description}</p>
-        <div className={clsx(variant == 'dark' ? 'text-foreground-dark' : 'text-solid-light', 'inline-flex')}>
-          <div className='inline-flex items-center gap-1'>
+      {imageURL && (
+        <Image
+          src={imageURL}
+          alt={`${dict.teaching["alt-activity-image"]} ${title}`}
+          width={768}
+          height={288}
+          style={{
+            objectFit: "cover",
+          }}
+          className="rounded-3xl w-3xl h-40 md:h-72"
+        />
+      )}
+      <div className="flex flex-col gap-2 md:gap-4">
+        <h3 className="text-lg md:text-2xl">{title}</h3>
+        <p
+          className={clsx(
+            variant == "dark" ? "text-foreground-dark" : "text-solid-light"
+          )}
+        >
+          {description}
+        </p>
+        <div
+          className={clsx(
+            variant == "dark" ? "text-foreground-dark" : "text-solid-light",
+            "inline-flex"
+          )}
+        >
+          <div className="inline-flex items-center gap-1">
             <FiClock size={18} />
             <span>{durationInHours}h&nbsp;·&nbsp;</span>
           </div>
-          <span className='inline-block'>{dict.teaching["text-level"]}: {level}</span>
+          <span className="inline-block">
+            {dict.teaching["text-level"]}: {level}
+          </span>
         </div>
-        <hr className={clsx(variant == 'dark' ? 'border-foreground-dark' : 'border-solid-light', "h-px my-2 md:my-0")} />
-        <LinkButton href={learnMoreURL} className="w-fit px-8">{dict.teaching["button-view-more-activity"]}</LinkButton>
+        {learnMoreURL && (
+          <>
+            <hr
+              className={clsx(
+                variant == "dark"
+                  ? "border-foreground-dark"
+                  : "border-solid-light",
+                "h-px my-2 md:my-0"
+              )}
+            />
+            <LinkButton href={learnMoreURL} className="w-fit px-8">
+              {dict.teaching["button-view-more-activity"]}
+            </LinkButton>
+          </>
+        )}
       </div>
     </div>
   );

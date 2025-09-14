@@ -16,28 +16,51 @@ interface ProjectCardProps {
   year: string;
   // learnMoreURL: string;
   imageURL: string;
-  variant?: 'light' | 'dark';
+  variant?: "light" | "dark";
 }
 
-async function ProjectCard({ title, description, imageURL, eventName, year, variant='dark' }: ProjectCardProps) {
-  const dict = await getDictionary('pt-BR');
+async function ProjectCard({
+  title,
+  description,
+  imageURL,
+  eventName,
+  year,
+  variant = "dark",
+}: ProjectCardProps) {
+  const dict = await getDictionary("pt-BR");
 
   return (
     <div className="flex flex-col w-full md:max-w-72 gap-6">
-      <Image
-        src={imageURL}
-        alt={`${dict.research['alt-project-image-base']} ${title}`}
-        width={288}
-        height={144}
-        style={{
-          objectFit: 'cover',
-        }}
-        className="rounded-3xl w-full md:w-72 h-40 md:h-36"
-      />
-      <div className='flex flex-col gap-2'>
-        <h3 className='text-lg'>{title}</h3>
-        <p className={clsx(variant == 'dark' ? 'text-foreground-dark' : 'text-solid-light', 'text-sm')}>{description}</p>
-        <span className={clsx(variant == 'dark' ? 'text-foreground-dark' : 'text-solid-light', 'text-sm')}>{eventName} • {year}</span>
+      {imageURL && (
+        <Image
+          src={imageURL}
+          alt={`${dict.research["alt-project-image-base"]} ${title}`}
+          width={288}
+          height={144}
+          style={{
+            objectFit: "cover",
+          }}
+          className="rounded-3xl w-full md:w-72 h-40 md:h-36"
+        />
+      )}
+      <div className="flex flex-col gap-2">
+        <h3 className="text-lg">{title}</h3>
+        <p
+          className={clsx(
+            variant == "dark" ? "text-foreground-dark" : "text-solid-light",
+            "text-sm"
+          )}
+        >
+          {description}
+        </p>
+        <span
+          className={clsx(
+            variant == "dark" ? "text-foreground-dark" : "text-solid-light",
+            "text-sm"
+          )}
+        >
+          {eventName} • {year}
+        </span>
       </div>
     </div>
   );

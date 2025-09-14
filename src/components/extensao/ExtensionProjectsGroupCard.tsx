@@ -16,29 +16,66 @@ interface ExtensionProjectCardProps {
   date: string;
   // learnMoreURL: string;
   imageURL: string;
-  variant?: 'light' | 'dark';
+  variant?: "light" | "dark";
 }
 
-async function ExtensionProjectCard({ title, description, imageURL, location, date, variant='dark' }: ExtensionProjectCardProps) {
-  const dict = await getDictionary('pt-BR');
+async function ExtensionProjectCard({
+  title,
+  description,
+  imageURL,
+  location,
+  date,
+  variant = "dark",
+}: ExtensionProjectCardProps) {
+  const dict = await getDictionary("pt-BR");
 
   return (
-    <div className={clsx(variant == 'dark' && "bg-solid text-foreground","flex flex-col w-full md:max-w-80 gap-6 p-6 rounded-4xl h-full")}>
-      <Image
-        src={imageURL}
-        alt={`${dict.extension["alt-project-image-base"]} ${title}`}
-        width={288}
-        height={144}
-        style={{
-          objectFit: 'cover',
-        }}
-        className="rounded-3xl w-full md:w-72 h-40 md:h-36"
-      />
-      <div className='flex flex-col gap-2'>
-        <h3 className='text-lg'>{title}</h3>
-        <p className={clsx(variant == 'dark' ? 'text-foreground-dark' : 'text-solid-light', 'text-sm')}>{description}</p>
-        <span className={clsx(variant == 'dark' ? 'text-foreground-dark' : 'text-solid-light', 'flex gap-1 items-center text-sm')}><FiMapPin size={18} />{location}</span>
-        <span className={clsx(variant == 'dark' ? 'text-foreground-dark' : 'text-solid-light', 'flex gap-1 items-center text-sm')}><FiCalendar  size={18} />{date}</span>
+    <div
+      className={clsx(
+        variant == "dark" && "bg-solid text-foreground",
+        "flex flex-col w-full md:max-w-80 gap-6 p-6 rounded-4xl h-full"
+      )}
+    >
+      {imageURL && (
+        <Image
+          src={imageURL}
+          alt={`${dict.extension["alt-project-image-base"]} ${title}`}
+          width={288}
+          height={144}
+          style={{
+            objectFit: "cover",
+          }}
+          className="rounded-3xl w-full md:w-72 h-40 md:h-36"
+        />
+      )}
+      <div className="flex flex-col gap-2">
+        <h3 className="text-lg">{title}</h3>
+        <p
+          className={clsx(
+            variant == "dark" ? "text-foreground-dark" : "text-solid-light",
+            "text-sm"
+          )}
+        >
+          {description}
+        </p>
+        <span
+          className={clsx(
+            variant == "dark" ? "text-foreground-dark" : "text-solid-light",
+            "flex gap-1 items-center text-sm"
+          )}
+        >
+          <FiMapPin size={18} />
+          {location}
+        </span>
+        <span
+          className={clsx(
+            variant == "dark" ? "text-foreground-dark" : "text-solid-light",
+            "flex gap-1 items-center text-sm"
+          )}
+        >
+          <FiCalendar size={18} />
+          {date}
+        </span>
       </div>
     </div>
   );
