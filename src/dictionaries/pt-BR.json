@@ -16,19 +16,18 @@
   "home": {
     "about-us": {
       "text-title": "Sobre nós",
-      "text-content": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
+      "text-content": "A LASER (Liga Acadêmica de Sistemas Embarcados) tem como propósito fortalecer a área de sistemas embarcados na UFPE, promovendo o estudo, pesquisa e aplicação de tecnologias que envolvem tanto hardware quanto software. Buscamos difundir conhecimentos fundamentais e avançados, estimular a inovação tecnológica, oferecer experiências práticas, fomentar a interdisciplinaridade e aproximar a academia do setor industrial. Nossa missão é capacitar estudantes, ampliar suas competências técnicas e teóricas, e criar um ambiente de aprendizado, networking e contribuição científica com impacto real na sociedade."
     },
     "areas": {
       "text-title": "Áreas de atuação",
       "text-areas": [
-        "Embarcados",
-        "Sistemas críticos",
-        "Internet das coisas",
-        "Automotivo",
-        "Segurança",
-        "Embarcado",
-        "Embarcados",
-        "Embarcados"
+        "Automação",
+        "Internet das Coisas",
+        "AI on Edge",
+        "Robótica",
+        "Sistemas Críticos",
+        "Tecnologias Veiculares",
+        "Engenharia Biomédica"
       ]
     },
     "team": {
