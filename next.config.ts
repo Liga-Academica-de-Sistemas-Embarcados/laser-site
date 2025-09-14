@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
         hostname: 'placecats.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'drive.google.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/**',
+      }
     ],
   }
 };
