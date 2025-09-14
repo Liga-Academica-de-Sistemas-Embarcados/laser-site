@@ -37,35 +37,31 @@
     "projects": {
       "text-title": "Nossos projetos",
       "items": [
-          {
-            "alt-title": "Projeto 1",
-            "image-url": "https://placecats.com/500/500",
-            "link-url": "/extensao"
-          },
-          {
-            "alt-title": "Projeto 2",
-            "image-url": "https://placecats.com/500/500",
-            "link-url": "/extensao"
-          },
-          {
-            "alt-title": "Projeto 3",
-            "image-url": "https://placecats.com/500/500",
-            "link-url": "/extensao"
-          },
-          {
-            "alt-title": "Projeto 4",
-            "image-url": "https://placecats.com/500/500",
-            "link-url": "/extensao"
-          },
-          {
-            "alt-title": "Projeto 5",
-            "image-url": "https://placecats.com/500/500",
-            "link-url": "/pesquisa"
-          }
+        {
+          "alt-title": "CInBarke",
+          "image-url": "https://placecats.com/500/500",
+          "link-url": "/extensao"
+        },
+        {
+          "alt-title": "SBESC",
+          "image-url": "https://placecats.com/500/500",
+          "link-url": "/extensao"
+        },
+        {
+          "alt-title": "RoboCar",
+          "image-url": "https://placecats.com/500/500",
+          "link-url": "/extensao"
+        },
+        {
+          "alt-title": "Unimob",
+          "image-url": "https://placecats.com/500/500",
+          "link-url": "/extensao"
+        }
       ]
     }
   },
   "teaching": {
+    "text-description": "Promovemos a formação em sistemas embarcados, oferecendo eventos, materiais e conteúdos gratuitos para todos.",
     "button-view-more-activity": "Saiba mais",
     "text-level": "Nível",
     "alt-activity-image": "Imagem representativa da atividade",
