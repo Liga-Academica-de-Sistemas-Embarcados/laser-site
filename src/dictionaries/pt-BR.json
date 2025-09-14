@@ -70,65 +70,71 @@
         "text-title": "Workshops",
         "activities": [
           {
-            "text-title": "Introdução ao Arduino",
-            "image-url": "https://placecats.com/800/500",
-            "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
-            "text-duration-hours": 2,
+            "text-title": "Eletrônica Digital",
+            "image-url": "https://drive.google.com/uc?id=1x1TmL5KgxzjVcPE3w744GHrAenhvX6Dr",
+            "text-description": "Fundamentos de circuitos digitais com práticas de laboratório e uso de componentes básicos.",
+            "text-duration-hours": 4,
             "text-level": "Básico",
-            "link-view-more": "#"
+            "link-view-more": ""
+          },
+          {
+            "text-title": "Prototipação de Placas de Circuito Impresso",
+            "image-url": "https://drive.google.com/uc?id=1dybCRT75Hs5-u5WMYnwTfyANoXZZs8G4",
+            "text-description": "Conta com introdução a softwares, práticas e noções para o desenvolvimento de projetos.",
+            "text-duration-hours": 4,
+            "text-level": "Básico",
+            "link-view-more": ""
           }
         ]
       },
       {
         "text-title": "Oficinas",
-        "activities": [
-          {
-            "text-title": "Introdução ao Arduino",
-            "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
-            "text-duration-hours": 2,
-            "image-url": "https://placecats.com/800/500",
-            "text-level": "Básico",
-            "link-view-more": "#"
-          }
-        ]
+        "activities": []
       },
       {
         "text-title": "Palestras",
         "activities": [
           {
-            "text-title": "Introdução ao Arduino",
-            "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
+            "text-title": "Sistemas Críticos",
+            "text-description": "Ministrada pelo Prof. Gustavo Carvalho, aborda Métodos Formais em Sistemas Críticos e casos reais da indústria.",
             "text-duration-hours": 2,
             "text-level": "Básico",
-            "image-url": "https://placecats.com/800/500",
-            "link-view-more": "#"
+            "image-url": null,
+            "link-view-more": ""
           }
         ]
       }
     ]
   },
   "research": {
-    "text-description": "Conheça os projetos que movem a Liga: em competições e dentro do nosso próprio laboratório de ideias.",
+    "text-description": "Estimulamos ciência e tecnologia, gerando projetos com impacto social, competições e soluções internas.",
     "alt-project-image-base": "Imagem representativa do projeto",
     "contests": {
       "projects": [
         {
-          "text-title": "Introdução ao Arduino",
-          "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
-          "text-contest-name": "Competição X",
-          "text-year": "2025",
-          "image-url": "https://placecats.com/800/500"
+          "text-title": "SBESC – Simpósio Brasileiro de Engenharia de Sistemas Computacionais",
+          "text-description": "Executamos projetos aprovados no SBESC, destacando inovação e pesquisa aplicada em sistemas embarcados.",
+          "text-contest-name": "SBESC",
+          "text-year": "Em andamento",
+          "image-url": null
         }
       ]
     },
     "internal": {
       "projects": [
         {
-          "text-title": "Introdução ao Arduino",
-          "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
-          "text-event": "Competição X",
-          "text-year": "2025",
-          "image-url": "https://placecats.com/800/500"
+          "text-title": "MOVI – Monitoramento de Vias Públicas",
+          "text-description": "Plataforma que integra tecnologia embarcada e mobilidade urbana para monitorar a qualidade de vias em cidades inteligentes.",
+          "text-event": "LASER",
+          "text-year": "Em andamento",
+          "image-url": null
+        },
+        {
+          "text-title": "UNIMOB – Monitoramento de Transporte Público Universitário",
+          "text-description": "Sistema de monitoramento remoto de transporte público, aprovado pela FACEPE e em parceria com o LIVE/CIn-UFPE.",
+          "text-event": "LIVE/CIn-UFPE",
+          "text-year": "Em andamento",
+          "image-url": null
         }
       ]
     },
