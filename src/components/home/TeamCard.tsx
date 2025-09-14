@@ -36,7 +36,7 @@ export async function TeamCard({ solid }: ContentCardProps) {
       <h2 className="text-2xl md:text-3xl">
         Conheça a <span className="text-primary">equipe</span>
       </h2>
-      <div className="flex w-full justify-evenly flex-wrap gap-16 items-center">
+      <div className="flex w-full justify-evenly flex-wrap gap-16 items-start">
         {randomMembers.map((member, index) => (
           <MemberCard
             key={`team-member-${index}`}

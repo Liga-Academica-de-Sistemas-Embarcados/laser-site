@@ -10,8 +10,7 @@ export default async function Research() {
   return (
     <main>
       <Header
-        description="Conheça os projetos que movem a Liga: em competições
-e dentro do nosso próprio laboratório de ideias."
+        description={dict.research["text-description"]}
       >
         <span className="text-primary">Pesquisa</span> e Inovação
       </Header>

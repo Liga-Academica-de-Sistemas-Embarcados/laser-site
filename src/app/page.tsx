@@ -15,7 +15,7 @@ export default function Home() {
         <AboutUsCard solid />
         <AreasCard />
         <TeamCard solid />
-        <ProjectsCard />
+        {/* <ProjectsCard /> */}
       </div>
     </main>
   );
