@@ -5,7 +5,7 @@ import { getDictionary } from '@/app/dictionaries';
 
 function AreaChip({ title }: { title: string }) {
   return (
-    <div className="flex items-center justify-center bg-primary-light px-2 py-1 rounded-full">
+    <div className="flex items-center justify-center bg-[#E4E4E4] px-4 py-3 rounded-full">
       <span className='block leading-none md:text-lg text-solid'>{title}</span>
     </div>
   );
