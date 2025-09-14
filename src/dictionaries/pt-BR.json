@@ -146,15 +146,36 @@
     }
   },
   "extension": {
-    "text-description": "Projetos, ações e eventos para divulgar sistemas embarcados ao público externo à UFPE.",
+    "text-description": "Nos dedicamos à democratização do conhecimento em sistemas embarcados, apoiando projetos de valor científico, social e comercial. Atuamos com baterias de projetos, incentivamos pesquisas e participamos ativamente de eventos e competições, fortalecendo a inovação e a difusão do conhecimento acadêmico.",
     "alt-project-image-base": "Imagem representativa do projeto",
     "projects": [
       {
-        "text-title": "Introdução ao Arduino",
-        "text-description": "Aprenda os fundamentos do Arduino e como criar projetos simples.",
-        "text-location": "Competição X",
-        "text-date": "2025",
-        "image-url": "https://placecats.com/800/500"
+        "text-title": "CInBarke",
+        "text-description": "Oficinas de ensino que buscam divulgar, auxiliar e educar sobre campos diversos do universo dos embarcados",
+        "text-location": "LASER",
+        "text-date": "Em andamento",
+        "image-url": null
+      },
+      {
+        "text-title": "Competições",
+        "text-description": "Buscamos competir em eventos de embarcados, promovendo inovação, divulgação e compartilhamento de conhecimento.",
+        "text-location": "LASER",
+        "text-date": "Em andamento",
+        "image-url": null
+      },
+      {
+        "text-title": "Eventos e Feiras do Conhecimento",
+        "text-description": "Participamos de eventos e palestras para divulgar o universo dos sistemas embarcados.",
+        "text-location": "LASER",
+        "text-date": "Em andamento",
+        "image-url": null
+      },
+      {
+        "text-title": "Divulgação de Projetos e Pesquisas",
+        "text-description": "Compartilhamos conhecimento, fomenta equipes e projetos, ampliando valor acadêmico e social.",
+        "text-location": "LASER",
+        "text-date": "Em andamento",
+        "image-url": null
       }
     ],
     "contact-us": {
