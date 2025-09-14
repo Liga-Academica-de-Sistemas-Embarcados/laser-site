@@ -21,7 +21,7 @@ export function MembersGroupCard({
       <h2 className="text-2xl md:text-3xl border-b-2 border-primary w-fit pb-2 px-2">
         {title}
       </h2>
-      <div className="grid justify-center min-[400px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14">
+      <div className="grid justify-center min-[500px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14">
         {
           members.map((member, index) => (
             <MemberCard
