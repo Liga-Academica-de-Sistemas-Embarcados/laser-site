@@ -15,7 +15,7 @@ interface ProjectCardProps {
   eventName: string;
   year: string;
   // learnMoreURL: string;
-  imageURL: string;
+  imageURL: string | null;
   variant?: "light" | "dark";
 }
 

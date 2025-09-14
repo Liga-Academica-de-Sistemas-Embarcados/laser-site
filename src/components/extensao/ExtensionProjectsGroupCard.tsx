@@ -15,7 +15,7 @@ interface ExtensionProjectCardProps {
   location: string;
   date: string;
   // learnMoreURL: string;
-  imageURL: string;
+  imageURL: string | null;
   variant?: "light" | "dark";
 }
 

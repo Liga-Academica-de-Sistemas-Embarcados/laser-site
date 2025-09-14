@@ -17,7 +17,7 @@ interface ActivityCardProps {
   durationInHours: number;
   level: string;
   learnMoreURL: string;
-  imageURL: string;
+  imageURL: string | null;
   variant?: "light" | "dark";
 }
 
