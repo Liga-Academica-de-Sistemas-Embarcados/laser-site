@@ -69,30 +69,29 @@ async function ProjectCard({
 export function ProjectsGroupCard({
   solid,
   title,
-  projects
+  projects,
 }: ProjectsGroupCardProps) {
   return (
     <BaseContentCard
       solid={solid}
-      className={clsx({ 'text-solid': !solid }, 'flex flex-col gap-8 md:gap-12')}
+      className={clsx(
+        { "text-solid": !solid },
+        "flex flex-col gap-8 md:gap-12"
+      )}
     >
-      <h2 className="text-2xl md:text-3xl w-fit">
-        {title}
-      </h2>
+      <h2 className="text-2xl md:text-3xl w-fit">{title}</h2>
       <div className="flex justify-around items-start flex-wrap gap-8">
-        {
-          projects.map((project, index) => (
-            <ProjectCard
-              key={`${project.title}-${index}`}
-              title={project.title}
-              description={project.description}
-              eventName={project.eventName}
-              year={project.year}
-              imageURL={project.imageURL}
-              variant={solid ? 'dark' : 'light'}
-            />
-          ))
-        }
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={`${project.title}-${index}`}
+            title={project.title}
+            description={project.description}
+            eventName={project.eventName}
+            year={project.year}
+            imageURL={project.imageURL}
+            variant={solid ? "dark" : "light"}
+          />
+        ))}
       </div>
     </BaseContentCard>
   );

@@ -92,31 +92,32 @@ async function ActivityCard({
 export async function ActivitiesGroupCard({
   solid,
   title,
-  activities
+  activities,
 }: ActivitiesGroupCardProps) {
   return (
     <BaseContentCard
       solid={solid}
-      className={clsx({ 'text-solid': !solid }, 'flex flex-col gap-8 md:gap-12')}
+      className={clsx(
+        { "text-solid": !solid },
+        "flex flex-col gap-8 md:gap-12"
+      )}
     >
       <h2 className="text-2xl md:text-3xl border-b-2 border-primary w-fit pb-2 px-2">
         {title}
       </h2>
       <div className="flex flex-col gap-14 justify-between items-center">
-        {
-          activities.map((activity, index) => (
-            <ActivityCard
-              key={title+index}
-              title={activity.title}
-              description={activity.description}
-              durationInHours={activity.durationInHours}
-              level={activity.level}
-              learnMoreURL={activity.learnMoreURL}
-              imageURL={activity.imageURL}
-              variant={solid ? 'dark' : 'light'}
-            />
-          ))
-        }
+        {activities.map((activity, index) => (
+          <ActivityCard
+            key={title + index}
+            title={activity.title}
+            description={activity.description}
+            durationInHours={activity.durationInHours}
+            level={activity.level}
+            learnMoreURL={activity.learnMoreURL}
+            imageURL={activity.imageURL}
+            variant={solid ? "dark" : "light"}
+          />
+        ))}
       </div>
     </BaseContentCard>
   );

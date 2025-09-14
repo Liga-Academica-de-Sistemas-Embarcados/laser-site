@@ -83,27 +83,25 @@ async function ExtensionProjectCard({
 
 export function ExtensionProjectsGroupCard({
   solid,
-  projects
+  projects,
 }: ExtensionProjectsGroupCardProps) {
   return (
     <BaseContentCard
       solid={solid}
-      className={clsx({ 'text-solid': !solid }, 'flex flex-col gap-12')}
+      className={clsx({ "text-solid": !solid }, "flex flex-col gap-12")}
     >
       <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {
-          projects.map((project, index) => (
-            <ExtensionProjectCard
-              key={`${project.title}-${index}`}
-              title={project.title}
-              description={project.description}
-              location={project.location}
-              date={project.date}
-              imageURL={project.imageURL}
-              variant={solid ? 'light' : 'dark'}
-            />
-          ))
-        }
+        {projects.map((project, index) => (
+          <ExtensionProjectCard
+            key={`${project.title}-${index}`}
+            title={project.title}
+            description={project.description}
+            location={project.location}
+            date={project.date}
+            imageURL={project.imageURL}
+            variant={solid ? "light" : "dark"}
+          />
+        ))}
       </div>
     </BaseContentCard>
   );
