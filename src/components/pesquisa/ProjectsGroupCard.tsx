@@ -1,12 +1,12 @@
-import { clsx } from 'clsx';
-import Image from 'next/image';
+import { clsx } from "clsx";
+import Image from "next/image";
 
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
-import { getDictionary } from '@/app/dictionaries';
+import { BaseContentCard, ContentCardProps } from "../BaseContentCard";
+import { getDictionary } from "@/app/dictionaries";
 
 interface ProjectsGroupCardProps extends ContentCardProps {
   title: React.ReactNode;
-  projects: Omit<ProjectCardProps, 'variant'>[];
+  projects: Omit<ProjectCardProps, "variant">[];
 }
 
 interface ProjectCardProps {

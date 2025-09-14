@@ -1,14 +1,14 @@
-import { clsx } from 'clsx';
-import Image from 'next/image';
-import { FiClock } from 'react-icons/fi';
+import { clsx } from "clsx";
+import Image from "next/image";
+import { FiClock } from "react-icons/fi";
 
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
-import { LinkButton } from '../LinkButton';
-import { getDictionary } from '@/app/dictionaries';
+import { BaseContentCard, ContentCardProps } from "../BaseContentCard";
+import { LinkButton } from "../LinkButton";
+import { getDictionary } from "@/app/dictionaries";
 
 interface ActivitiesGroupCardProps extends ContentCardProps {
   title: string;
-  activities: Omit<ActivityCardProps, 'variant'>[];
+  activities: Omit<ActivityCardProps, "variant">[];
 }
 
 interface ActivityCardProps {

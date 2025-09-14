@@ -1,12 +1,12 @@
-import { clsx } from 'clsx';
-import Image from 'next/image';
-import { FiCalendar, FiMapPin } from 'react-icons/fi';
+import { clsx } from "clsx";
+import Image from "next/image";
+import { FiCalendar, FiMapPin } from "react-icons/fi";
 
-import { BaseContentCard, ContentCardProps } from '../BaseContentCard';
-import { getDictionary } from '@/app/dictionaries';
+import { BaseContentCard, ContentCardProps } from "../BaseContentCard";
+import { getDictionary } from "@/app/dictionaries";
 
 interface ExtensionProjectsGroupCardProps extends ContentCardProps {
-  projects: Omit<ExtensionProjectCardProps, 'variant'>[];
+  projects: Omit<ExtensionProjectCardProps, "variant">[];
 }
 
 interface ExtensionProjectCardProps {
