@@ -96,7 +96,7 @@ export function Navbar({ onSidebarOpen, onSidebarClose }: NavbarProps) {
   };
 
   return (
-    <nav data-sidebar-open={sideBarOpen ? "true" : "false"} className="flex justify-center lg:justify-between items-center sticky shadow-xl bg-solid top-4 md:top-8 w-full h-12 rounded-full px-9 lg:pr-36">
+    <nav data-sidebar-open={sideBarOpen ? "true" : "false"} className="flex justify-center lg:justify-between items-center sticky shadow-[0_1px_5px_0_rgba(242,242,242,0.15)] bg-solid top-4 md:top-8 w-full h-12 rounded-full px-9 lg:pr-36">
       <MenuButton iconSize={24} onClick={handleOpenSidebar} />
       <Link href="/">
         <Image src={logo} alt="LASER" width={64} height={17} priority />
