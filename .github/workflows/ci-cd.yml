@@ -1,0 +1,58 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+
+jobs:
+  # etapa de CI (testes e build)
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Testar build do Next.js
+        run: npm run build
+
+      - name: Criar pacote do projeto
+        run: |
+          tar -czf /tmp/laser-site.tar.gz .
+      - name: Upload do artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: laser-site-package
+          path: /tmp/laser-site.tar.gz
+
+
+  # etapa de CD (deploy)
+  deploy:
+    needs: test-and-build
+    runs-on:
+      - self-hosted
+      - linux
+      - x64
+
+    if: github.ref == 'refs/heads/main' # só roda o deploy na branch main
+
+    steps:
+      - name: Baixar artefato de build
+        uses: actions/download-artifact@v4
+        with:
+          name: laser-site-package
+
+      - name: Descompactar e deploy
+        run: |
+          rm -rf ${{ secrets.VM_LASERSITE_PATH }}/*
+          tar -xzf laser-site-package.tar.gz -C ${{ secrets.VM_LASERSITE_PATH }}
+          rm -f laser-site-package.tar.gz
