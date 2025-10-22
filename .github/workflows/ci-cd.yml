@@ -1,58 +1,64 @@
-name: CI/CD Pipeline
+name: Build and Deploy
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [ main ]
   pull_request:
 
 jobs:
-  # etapa de CI (testes e build)
-  test-and-build:
+  # CI
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Instalar dependências
+      - name: Install dependencies
         run: npm ci
 
-      - name: Testar build do Next.js
+      - name: Next.js build
         run: npm run build
 
-      - name: Criar pacote do projeto
+      - name: Pack build output
         run: |
           tar -czf /tmp/laser-site.tar.gz .
+
       - name: Upload do artefato
         uses: actions/upload-artifact@v4
         with:
-          name: laser-site-package
+          name: LaserSiteBuild
           path: /tmp/laser-site.tar.gz
 
 
-  # etapa de CD (deploy)
+  # CD
   deploy:
-    needs: test-and-build
+    needs: build
     runs-on:
       - self-hosted
       - linux
       - x64
 
-    if: github.ref == 'refs/heads/main' # só roda o deploy na branch main
+    if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Baixar artefato de build
+      - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
-          name: laser-site-package
+          name: LaserSiteBuild
 
-      - name: Descompactar e deploy
+      - name: Unpack and deploy
         run: |
-          rm -rf ${{ secrets.VM_LASERSITE_PATH }}/*
-          tar -xzf laser-site-package.tar.gz -C ${{ secrets.VM_LASERSITE_PATH }}
-          rm -f laser-site-package.tar.gz
+          if [ ! -f laser-site.tar.gz ]; then
+            echo "Error: laser-site.tar.gz not found"
+            exit 1
+          fi
+
+          rm -rf "${{ secrets.VM_LASERSITE_PATH }}"/*
+          tar -xzf laser-site.tar.gz -C "${{ secrets.VM_LASERSITE_PATH }}"
+          rm -f laser-site.tar.gz
