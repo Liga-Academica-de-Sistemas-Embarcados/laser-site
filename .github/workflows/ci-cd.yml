@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  # CI
+  # CI - Build
   build:
     runs-on: ubuntu-latest
 
@@ -29,14 +29,14 @@ jobs:
         run: |
           tar -czf /tmp/laser-site.tar.gz .
 
-      - name: Upload do artefato
+      - name: Artifact upload
         uses: actions/upload-artifact@v4
         with:
           name: LaserSiteBuild
           path: /tmp/laser-site.tar.gz
 
 
-  # CD
+  # CD - Deploy
   deploy:
     needs: build
     runs-on:
@@ -59,6 +59,16 @@ jobs:
             exit 1
           fi
 
+          echo "Cleaning previous deployment..."
           rm -rf "${{ secrets.VM_LASERSITE_PATH }}"/*
+
+          echo "Extracting new build..."
           tar -xzf laser-site.tar.gz -C "${{ secrets.VM_LASERSITE_PATH }}"
           rm -f laser-site.tar.gz
+
+          echo "Restarting Docker containers..."
+          cd "${{ secrets.VM_DOCKER_CONFIG_PATH }}"/
+          docker compose down
+          docker compose up -d --build
+
+          echo "Deployment completed successfully!"
