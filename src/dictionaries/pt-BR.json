@@ -205,17 +205,17 @@
         },
         {
           "text-name": "Jaubert Gualberto Lima de Souza Gouveia",
-          "text-role": "Diretor de Ensino, Lider de Eixo Temático",
+          "text-role": "Diretor de Ensino",
           "text-email": "jglg@cin.ufpe.br",
           "research-area": "I.A. Embarcada",
           "image-url": "https://drive.google.com/uc?id=1w-LELKougymzOppOc2zv-Ri7Y-MO5c3U"
         },
         {
-          "text-name": "Silvanio da Silva Assunção",
-          "text-role": "Diretor de Pesquisa",
-          "text-email": "ssa@cin.ufpe.br",
-          "research-area": "I.A. Embarcada",
-          "image-url": "https://drive.google.com/uc?id=18LcbdxZ705RzRjk0-5ldka6ddpK9h61C"
+          "text-name": "Filipe Santos Chaves",
+          "text-role": "Diretor de Pesquisa e Lider de Eixo Temático",
+          "text-email": "fsc5@cin.ufpe.br",
+          "research-area": "Tecnologia Automôtiva",
+          "image-url": "https://drive.google.com/uc?id=1vS2Q6q9eNd8tZNO9of_1862KGI6dtryJ"
         },
         {
           "text-name": "André Lima Jordão",
@@ -223,6 +223,13 @@
           "text-email": "alj@cin.ufpe.br",
           "research-area": "Automação",
           "image-url": "https://avatars.githubusercontent.com/u/96208310?s=400&u=bdbe51a8a24208541b2827cfe8ae506c95d54a95"
+        },
+        {
+          "text-name": "Pedro Henrique de Andrade Cavalcanti",
+          "text-role": "Vice-diretor de Extensão",
+          "text-email": "phac2@cin.ufpe.br",
+          "research-area": "Sistemas Críticos",
+          "image-url": "https://avatars.githubusercontent.com/PedroCavalcanti5529"
         },
         {
           "text-name": "Luis Eduardo Lustosa Brito",
@@ -267,18 +274,11 @@
           "image-url": "https://drive.google.com/uc?id=1HOWIppB3WqY_tjh3dBT4tAnByCBsql46"
         },
         {
-          "text-name": "Filipe Santos Chaves",
-          "text-role": "Lider de Eixo Temático",
-          "text-email": "fsc5@cin.ufpe.br",
-          "research-area": "Tecnologia Automôtiva",
-          "image-url": "https://drive.google.com/uc?id=1vS2Q6q9eNd8tZNO9of_1862KGI6dtryJ"
-        },
-        {
-          "text-name": "Pedro Henrique de Andrade Cavalcanti",
+          "text-name": "Silvanio da Silva Assunção",
           "text-role": "Membro",
-          "text-email": "phac2@cin.ufpe.br",
-          "research-area": "Sistemas Críticos",
-          "image-url": "https://avatars.githubusercontent.com/PedroCavalcanti5529"
+          "text-email": "ssa@cin.ufpe.br",
+          "research-area": "I.A. Embarcada",
+          "image-url": "https://drive.google.com/uc?id=18LcbdxZ705RzRjk0-5ldka6ddpK9h61C"
         },
         {
           "text-name": "Maurício Andrey da Silva Santos",
