@@ -197,11 +197,11 @@
           "image-url": "https://drive.google.com/uc?id=1t_XDbqJp6nFr8RR09IuupM_qdRJamrCL"
         },
         {
-          "text-name": "Felipe Ferreira da Silva Santos",
-          "text-role": "Vice-Presidente, Líder de Eixo Temático",
-          "text-email": "ffss@cin.ufpe.br",
-          "research-area": "Sistemas Críticos",
-          "image-url": "https://avatars.githubusercontent.com/u/38836278?v=4"
+          "text-name": "Filipe Santos Chaves",
+          "text-role": "Vice-Presidente, Lider de Eixo Temático",
+          "text-email": "fsc5@cin.ufpe.br",
+          "research-area": "Tecnologia Automôtiva",
+          "image-url": "https://drive.google.com/uc?id=1vS2Q6q9eNd8tZNO9of_1862KGI6dtryJ"
         },
         {
           "text-name": "Jaubert Gualberto Lima de Souza Gouveia",
@@ -211,11 +211,18 @@
           "image-url": "https://drive.google.com/uc?id=1w-LELKougymzOppOc2zv-Ri7Y-MO5c3U"
         },
         {
-          "text-name": "Filipe Santos Chaves",
-          "text-role": "Diretor de Pesquisa, Lider de Eixo Temático",
-          "text-email": "fsc5@cin.ufpe.br",
-          "research-area": "Tecnologia Automôtiva",
-          "image-url": "https://drive.google.com/uc?id=1vS2Q6q9eNd8tZNO9of_1862KGI6dtryJ"
+          "text-name": "João Victor Nascimento Lima",
+          "text-role": "Vice-Diretor de Ensino",
+          "text-email": "jvnl@cin.ufpe.br",
+          "research-area": "I.A. Embarcada",
+          "image-url": "https://drive.google.com/uc?id=141H2acvqVoFJU6xdyZC3SkmHTQ3krLK3"
+        },
+        {
+          "text-name": "Maurício Andrey da Silva Santos",
+          "text-role": "Diretor de Pesquisa",
+          "text-email": "mfss2@cin.ufpe.br",
+          "research-area": "Engenharia Biomédica",
+          "image-url": "https://avatars.githubusercontent.com/u/135215375?s=400&u=8ef51162d307d869144c86b51e7fdd48d01ceb91"
         },
         {
           "text-name": "André Lima Jordão",
@@ -230,6 +237,34 @@
           "text-email": "phac2@cin.ufpe.br",
           "research-area": "Sistemas Críticos",
           "image-url": "https://avatars.githubusercontent.com/PedroCavalcanti5529"
+        },
+        {
+          "text-name": "Felipe Ferreira da Silva Santos",
+          "text-role": "Líder de Eixo Temático",
+          "text-email": "ffss@cin.ufpe.br",
+          "research-area": "Sistemas Críticos",
+          "image-url": "https://avatars.githubusercontent.com/u/38836278?v=4"
+        },
+        {
+          "text-name": "Arthur Calabria Villar de Morais Guerra",
+          "text-role": "Lider de Eixo Temático",
+          "text-email": "acvmg@cin.ufpe.br",
+          "research-area": "I.A. Embarcada",
+          "image-url": "https://avatars.githubusercontent.com/u/163882421"
+        },
+        {
+          "text-name": "Juliana de Albuquerque Souza Costa",
+          "text-role": "Lider de Eixo Temático",
+          "text-email": "juliana.ascosta@ufpe.br",
+          "research-area": "Engenharia Biomédica",
+          "image-url": "https://drive.google.com/uc?id=1XnAY0VdwZ6jWO8pzmK2z1M_TGgbpkdye"
+        },
+        {
+          "text-name": "Lucas Alves Barbosa",
+          "text-role": "Vice-Líder de Eixo Temático",
+          "text-email": "lab10@cin.ufpe.br",
+          "research-area": "Engenharia Biomédica",
+          "image-url": "https://drive.google.com/uc?id=1fALQcPCdyInLDG-_uEFst6ynCY4Bopix"
         },
         {
           "text-name": "Luis Eduardo Lustosa Brito",
@@ -281,13 +316,6 @@
           "image-url": "https://drive.google.com/uc?id=18LcbdxZ705RzRjk0-5ldka6ddpK9h61C"
         },
         {
-          "text-name": "Maurício Andrey da Silva Santos",
-          "text-role": "Membro",
-          "text-email": "mfss2@cin.ufpe.br",
-          "research-area": "Engenharia Biomédica",
-          "image-url": "https://avatars.githubusercontent.com/u/135215375?s=400&u=8ef51162d307d869144c86b51e7fdd48d01ceb91"
-        },
-        {
           "text-name": "Déborah Evelyn Leite Alcantara",
           "text-role": "Membro",
           "text-email": "dela@cin.ufpe.br",
@@ -300,13 +328,6 @@
           "text-email": "gafv@cin.ufpe.br",
           "research-area": "Tecnologia Automôtiva",
           "image-url": "https://avatars.githubusercontent.com/gabyalvesfv"
-        },
-        {
-          "text-name": "Arthur Calabria Villar de Morais Guerra",
-          "text-role": "Lider de Eixo Temático",
-          "text-email": "acvmg@cin.ufpe.br",
-          "research-area": "I.A. Embarcada",
-          "image-url": "https://avatars.githubusercontent.com/u/163882421"
         },
         {
           "text-name": "Pablo Nunes de Oliveira ",
@@ -323,25 +344,11 @@
           "image-url": "https://drive.google.com/uc?id=1bF_NYsCDgFMyAXBwy98tAG38XGDFmpuM"
         },
         {
-          "text-name": "Lucas Alves Barbosa",
-          "text-role": "Vice-Líder de Eixo Temático",
-          "text-email": "lab10@cin.ufpe.br",
-          "research-area": "Engenharia Biomédica",
-          "image-url": "https://drive.google.com/uc?id=1fALQcPCdyInLDG-_uEFst6ynCY4Bopix"
-        },
-        {
           "text-name": "Marina Rodas Sales",
           "text-role": "Membro",
           "text-email": "mrs5@cin.ufpe.br",
           "research-area": "Automação",
           "image-url": "https://avatars.githubusercontent.com/u/122946394?s=400&u=89af91d2a519962d048155b8803292089a27e3c4"
-        },
-        {
-          "text-name": "Juliana de Albuquerque Souza Costa",
-          "text-role": "Lider de Eixo Temático",
-          "text-email": "juliana.ascosta@ufpe.br",
-          "research-area": "Engenharia Biomédica",
-          "image-url": "https://drive.google.com/uc?id=1XnAY0VdwZ6jWO8pzmK2z1M_TGgbpkdye"
         }
       ]
     },
