@@ -112,7 +112,7 @@
     "contests": {
       "projects": [
         {
-          "text-title": "SBESC – Simpósio Brasileiro de Engenharia de Sistemas Computacionais",
+          "text-title": "SBESC - Simpósio Brasileiro de Engenharia de Sistemas Computacionais",
           "text-description": "Executamos projetos aprovados no SBESC, destacando inovação e pesquisa aplicada em sistemas embarcados.",
           "text-contest-name": "SBESC",
           "text-year": "Em andamento",
@@ -123,14 +123,14 @@
     "internal": {
       "projects": [
         {
-          "text-title": "MOVI – Monitoramento de Vias Públicas",
+          "text-title": "MOVI - Monitoramento de Vias Públicas",
           "text-description": "Plataforma que integra tecnologia embarcada e mobilidade urbana para monitorar a qualidade de vias em cidades inteligentes.",
           "text-event": "LASER",
           "text-year": "Em andamento",
           "image-url": null
         },
         {
-          "text-title": "UNIMOB – Monitoramento de Transporte Público Universitário",
+          "text-title": "UNIMOB - Monitoramento de Transporte Público Universitário",
           "text-description": "Sistema de monitoramento remoto de transporte público, aprovado pela FACEPE e em parceria com o LIVE/CIn-UFPE.",
           "text-event": "LIVE/CIn-UFPE",
           "text-year": "Em andamento",
@@ -150,32 +150,18 @@
     "alt-project-image-base": "Imagem representativa do projeto",
     "projects": [
       {
+        "text-title": "RoboCar Race 2025 - 3º Lugar",
+        "text-description": "Nossa equipe conquistou o 3º Lugar na competitiva categoria Júnior da prova de veículos autônomos em escala.",
+        "text-location": "Grand Plaza Shopping - Santo André/SP",
+        "text-date": "30/11/2025",
+        "image-url": "https://drive.google.com/uc?id=1C0JCGzi55L05dquypoWoCMCNkbP0ulhV"
+      },
+      {
         "text-title": "CInBarke",
         "text-description": "Oficinas de ensino que buscam divulgar, auxiliar e educar sobre campos diversos do universo dos embarcados",
         "text-location": "LASER",
         "text-date": "Em andamento",
-        "image-url": null
-      },
-      {
-        "text-title": "Competições",
-        "text-description": "Buscamos competir em eventos de embarcados, promovendo inovação, divulgação e compartilhamento de conhecimento.",
-        "text-location": "LASER",
-        "text-date": "Em andamento",
-        "image-url": null
-      },
-      {
-        "text-title": "Eventos e Feiras do Conhecimento",
-        "text-description": "Participamos de eventos e palestras para divulgar o universo dos sistemas embarcados.",
-        "text-location": "LASER",
-        "text-date": "Em andamento",
-        "image-url": null
-      },
-      {
-        "text-title": "Divulgação de Projetos e Pesquisas",
-        "text-description": "Compartilhamos conhecimento, fomenta equipes e projetos, ampliando valor acadêmico e social.",
-        "text-location": "LASER",
-        "text-date": "Em andamento",
-        "image-url": null
+        "image-url": "https://drive.google.com/uc?id=1FEf9IOTaWaUXddhhYOOQjivHtyeAuwbY"
       }
     ],
     "contact-us": {
