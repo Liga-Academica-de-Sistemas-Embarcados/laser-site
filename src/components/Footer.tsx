@@ -17,9 +17,9 @@ function SocialIcon({ href, alt, Icon }: SocialIconProps) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={alt}
-      className="flex items-center justify-center rounded-full w-8 h-8 border-[1px] border-background"
+      className="flex items-center justify-center rounded-full p-2.5 border-[1px] border-background"
     >
-      <Icon size={15} />
+      <Icon size={20} strokeWidth={1.5} />
     </Link>
   );
 }
