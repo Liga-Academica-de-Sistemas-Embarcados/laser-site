@@ -79,7 +79,7 @@ export function ProjectsGroupCard({
         "flex flex-col gap-8 md:gap-12"
       )}
     >
-      <h2 className="text-2xl md:text-3xl w-fit">{title}</h2>
+      <h2 className="font-[350] text-2xl md:text-3xl border-b border-primary pb-2 px-2 w-fit">{title}</h2>
       <div className="flex justify-around items-start flex-wrap gap-8">
         {projects.map((project, index) => (
           <ProjectCard
