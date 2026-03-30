@@ -24,7 +24,6 @@ export default async function Members() {
         />
         {dict.members.alumni.items.length > 0 && (
           <MembersGroupCard
-            solid
             title={dict.members.alumni["text-title"]}
             members={dict.members.alumni.items.map((member) => ({
               name: member["text-name"],
