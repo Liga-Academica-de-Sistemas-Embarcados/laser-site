@@ -25,13 +25,18 @@ interface NavbarItemProps {
 
 function NavbarItem({ page, href, isSelected }: NavbarItemProps) {
   return (
-    <li
-      className={clsx(
-        { 'text-primary': isSelected },
-        'leading-0 transition-opacity hover:opacity-85'
-      )}
-    >
-      <Link href={href}>{page}</Link>
+    <li>
+      <Link
+        href={href}
+        className={clsx(
+          "leading-none px-5 py-2.5 rounded-lg block",
+          isSelected
+            ? "bg-solid-light/75"
+            : "transition-all hover:bg-solid-light/25"
+        )}
+      >
+        {page}
+      </Link>
     </li>
   );
 }
@@ -96,7 +101,19 @@ export function Navbar({ onSidebarOpen, onSidebarClose }: NavbarProps) {
   };
 
   return (
-    <nav data-sidebar-open={sideBarOpen ? "true" : "false"} className="flex justify-center lg:justify-between items-center sticky shadow-[0_1px_5px_0_rgba(242,242,242,0.15)] bg-solid top-4 md:top-8 w-full h-12 rounded-full px-9 lg:pr-36">
+    <nav
+      data-sidebar-open={sideBarOpen ? "true" : "false"}
+      className="
+        flex justify-start
+        bg-solid
+        items-center sticky
+        border-b border-background/10
+        md:border md:border-background/10
+        top-0 md:top-5 lg:gap-20
+        w-full h-16 md:h-17 md:rounded-2xl
+        px-9
+      "
+      >
       <MenuButton iconSize={24} onClick={handleOpenSidebar} />
       <Link href="/">
         <Image src={logo} alt="LASER" width={64} height={17} priority />
@@ -108,7 +125,7 @@ export function Navbar({ onSidebarOpen, onSidebarClose }: NavbarProps) {
         pages={pages}
         selectedPage={selectedPage}
       />
-      <ul className="hidden lg:flex gap-12">
+      <ul className="hidden lg:flex gap-4 font-light">
         <WideNavbarItems pages={pages} selectedPage={selectedPage} />
       </ul>
     </nav>
@@ -128,7 +145,7 @@ function MenuButton({
 }: MenuButtonProps) {
   return (
     <button
-      className={`lg:hidden absolute left-4 p-1 cursor-pointer hover:opacity-85 active:opacity-75 ${className}`}
+      className={`lg:hidden absolute right-4 p-1 cursor-pointer hover:opacity-85 active:opacity-75 ${className}`}
       onClick={onClick}
       {...props}
     >
@@ -154,24 +171,24 @@ function SideBarMenu({
     <>
       <div
         className={clsx(
-          `fixed inset-0 z-40 bg-black opacity-50 transition-opacity`,
-          { 'hidden pointer-events-none': !isOpen }
+          `fixed inset-0 z-40 backdrop-blur-md bg-black/25 transition-opacity`,
+          { 'opacity-0 hidden pointer-events-none': !isOpen, 'opacity-100': isOpen }
         )}
         onClick={onClose}
       />
       <div
-        className={`fixed inset-0 left-0 z-50 w-fit h-screen min-w-xs flex flex-col gap-8 bg-solid px-6 py-4 shadow-lg transform transition-transform ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 right-0 z-50 w-fit h-screen min-w-xs flex flex-col gap-8 bg-solid px-6 py-4 shadow-lg transform transition-transform ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex justify-between items-center gap-6 border-b pb-2 border-solid-light ">
+        <div className="flex justify-between items-center gap-6 border-b pb-3 border-solid-light">
           <Link href="/">
             <Image src={logo} alt="LASER" width={64} height={17} priority />
           </Link>
-          <button onClick={onClose} className="p-1 cursor-pointer">
+          <button onClick={onClose} className="p-1.5 cursor-pointer hover:bg-solid-light/25 rounded-full transition-all">
             <FiX
               size={24}
-              className="text-solid-light hover:opacity-85 active:opacity-75"
+              className="text-solid-light hover:opacity-100 active:opacity-75 rounded-full"
             />
           </button>
         </div>
@@ -180,8 +197,10 @@ function SideBarMenu({
             <Link key={page} href={href} onClick={onClose}>
               <li
                 className={clsx(
-                  'gap-3 p-3 rounded-xl hover:opacity-85 active:opacity-75',
-                  { 'bg-solid-lighter': selectedPage === page }
+                  "gap-3 p-3 rounded-xl active:opacity-75",
+                  selectedPage === page
+                    ? "bg-solid-light/75"
+                    : "transition-all hover:bg-solid-light/25"
                 )}
               >
                 {page}
