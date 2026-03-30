@@ -16,7 +16,7 @@ export async function ExtensionContactUsCard({ solid }: { solid?: boolean }) {
         'flex flex-col gap-6 items-center justify-center'
       )}
     >
-      <h2 className="text-2xl md:text-3xl w-fit text-center">{dict.extension["contact-us"]["text-title"]}</h2>
+      <h2 className="font-[350] text-2xl md:text-3xl w-fit text-center">{dict.extension["contact-us"]["text-title"]}</h2>
       <div className="flex flex-col items-center justify-center flex-wrap gap-8">
         <p className="md:text-lg text-center">
           {dict.extension["contact-us"]["text-description"]}
