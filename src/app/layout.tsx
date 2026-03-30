@@ -29,7 +29,7 @@ export default async function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${lexend.variable} antialiased bg-main`}>
-        <div className="relative z-10 max-w-[1150px] mx-2 min-[1150px]:mx-auto">
+        <div className="relative z-10 max-w-[1300px] min-[1300px]:mx-auto">
           <Navbar />
           <div className="mt-10">
             {children}
