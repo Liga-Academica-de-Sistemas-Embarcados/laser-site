@@ -11,7 +11,11 @@ export interface BaseContentCardProps extends ContentCardProps {
 
 export function BaseContentCard({ solid, children, className }: BaseContentCardProps) {
   return (
-    <div className={clsx('rounded-3xl p-8 md:p-11', { 'bg-solid': solid, 'bg-[#f2f2f2] border border-[#DADADA]': !solid }, className)}>
+    <div className={clsx(
+      'md:rounded-3xl p-8 md:p-12 font-light',
+      { 'bg-solid': solid, 'bg-[#f2f2f2] border border-[#DADADA]': !solid },
+      className
+    )}>
       {children}
     </div>
   );

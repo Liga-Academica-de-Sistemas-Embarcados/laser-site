@@ -41,13 +41,13 @@ export function MemberCard({
         <div
           className={clsx(
             {
-              "text-solid bg-background": variant === "light",
-              "text-foreground bg-solid font-normal": variant === "dark",
+              "bg-solid-light/25 text-white/85": variant === "dark",
+              "bg-solid-light/15 text-solid": variant === "light",
             },
-            "flex gap-2 text-xs md:text-sm px-2 py-1 items-center rounded-full w-fit"
+            "flex justify-center items-center gap-3 text-xs md:text-sm px-3.5 py-1.5 rounded-xl w-fit"
           )}
         >
-          <FiMail size={18} />
+          <FiMail size={18} className="stroke-[1]" />
           {email}
         </div>
       </div>
