@@ -102,7 +102,7 @@ export async function ActivitiesGroupCard({
         "flex flex-col gap-8 md:gap-12"
       )}
     >
-      <h2 className="text-2xl md:text-3xl border-b-2 border-primary w-fit pb-2 px-2">
+      <h2 className="font-[350] text-2xl md:text-3xl border-b border-primary w-fit pb-2 px-2">
         {title}
       </h2>
       <div className="flex flex-col gap-14 justify-between items-center">
