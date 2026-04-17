@@ -246,6 +246,20 @@
           "image-url": "https://drive.google.com/uc?id=1XnAY0VdwZ6jWO8pzmK2z1M_TGgbpkdye"
         },
         {
+          "text-name": "Ruan Flaneto Cartier",
+          "text-role": "Lider de Eixo Temático",
+          "text-email": "ruan.cartier@ufpe.br",
+          "research-area": "-",
+          "image-url": "https://drive.google.com/uc?id=1rWy5iKorCFB-6aN0V7LHNfZktFIgFCo0"
+        },
+        {
+          "text-name": "Luciano José da Silva Junior",
+          "text-role": "Lider de Eixo Temático",
+          "text-email": "ljsj@cin.ufpe.br",
+          "research-area": "-",
+          "image-url": "https://drive.google.com/uc?id=1py8v3Q04ykXWEusu1hR7ZDVf0H65Df-j"
+        },
+        {
           "text-name": "Lucas Alves Barbosa",
           "text-role": "Vice-Líder de Eixo Temático",
           "text-email": "lab10@cin.ufpe.br",
@@ -253,11 +267,18 @@
           "image-url": "https://drive.google.com/uc?id=1fALQcPCdyInLDG-_uEFst6ynCY4Bopix"
         },
         {
-          "text-name": "Luis Eduardo Lustosa Brito",
+          "text-name": "Denilson Pereira dos Santos",
           "text-role": "Secretário de Mídias e Comunicação",
-          "text-email": "lelb2@cin.ufpe.br",
+          "text-email": "dps5@cin.ufpe.br",
           "research-area": "Design e Comunicação",
-          "image-url": "https://drive.google.com/uc?id=1wRP0--5YCDkqaOuHD2cTqsTR-iegJTxV"
+          "image-url": "https://drive.google.com/uc?id=1NEm3zJmSxee8UFrVZiDyCVFyL5UJINQV"
+        },
+        {
+          "text-name": "Pedro Henrique Brito Machado",
+          "text-role": "Vice-Secretário de Mídias e Comunicação",
+          "text-email": "phbm@cin.ufpe.br",
+          "research-area": "Design e Comunicação",
+          "image-url": "https://drive.google.com/uc?id=1zX7HSciX8ATfzkLhR9Z9DWzaWrE6kiBM"
         },
         {
           "text-name": "Samuel Leonildo Gonzaga Braga",
@@ -265,6 +286,20 @@
           "text-email": "slgb@cin.ufpe.br",
           "research-area": "Design e Comunicação",
           "image-url": "https://drive.google.com/uc?id=1xmR7JK06PR79iz_rXI4OZGBTMxnmogHV"
+        },
+        {
+          "text-name": "Rayssa Vitória Lima da Silva",
+          "text-role": "Designer",
+          "text-email": "rayssa.rvls@ufpe.br",
+          "research-area": "Design e Comunicação",
+          "image-url": "https://drive.google.com/uc?id=1Ml5y286y6BpqNX1zwQPB7lBrG3STLtbV"
+        },
+        {
+          "text-name": "Naiane Evely da Silva ",
+          "text-role": "Designer",
+          "text-email": "naiane.evely@ufpe.br",
+          "research-area": "Design e Comunicação",
+          "image-url": "https://drive.google.com/uc?id=1Vr-YOJNDKX_XqXYUEgcoZ3BVtBBLhBOw"
         },
         {
           "text-name": "Lucas Felipe Leal Andrade",
@@ -340,7 +375,15 @@
     },
     "alumni": {
       "text-title": "Alumni",
-      "items": []
+      "items": [
+        {
+          "text-name": "Luis Eduardo Lustosa Brito",
+          "text-role": "Secretário de Mídias e Comunicação",
+          "text-email": "lelb2@cin.ufpe.br",
+          "research-area": "Design e Comunicação",
+          "image-url": "https://drive.google.com/uc?id=1wRP0--5YCDkqaOuHD2cTqsTR-iegJTxV"
+        }
+      ]
     }
   }
 }
