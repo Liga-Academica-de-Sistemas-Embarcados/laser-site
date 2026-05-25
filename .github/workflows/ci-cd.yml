@@ -45,12 +45,27 @@ jobs:
       - x64
 
     if: github.ref == 'refs/heads/main'
-
+    env:
+      LASERSITE_PATH: ${{ secrets.VM_LASERSITE_PATH }}
+      DOCKER_CONFIG_PATH: ${{ secrets.VM_DOCKER_CONFIG_PATH }}
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: LaserSiteBuild
+
+      - name: Validate secrets
+        run: |
+          if [ -z "$LASERSITE_PATH" ]; then
+            echo "Error: VM_LASERSITE_PATH secret is not set"
+            exit 1
+          fi
+
+          if [ -z "$DOCKER_CONFIG_PATH" ]; then
+            echo "Error: VM_DOCKER_CONFIG_PATH secret is not set"
+            exit 1
+          fi
+          echo "Secrets validated successfully"
 
       - name: Unpack and deploy
         run: |
@@ -60,14 +75,14 @@ jobs:
           fi
 
           echo "Cleaning previous deployment..."
-          rm -rf "${{ secrets.VM_LASERSITE_PATH }}"/*
+          rm -rf "$LASERSITE_PATH"/*
 
           echo "Extracting new build..."
-          tar -xzf laser-site.tar.gz -C "${{ secrets.VM_LASERSITE_PATH }}"
+          tar -xzf laser-site.tar.gz -C "$LASERSITE_PATH"
           rm -f laser-site.tar.gz
 
           echo "Restarting Docker containers..."
-          cd "${{ secrets.VM_DOCKER_CONFIG_PATH }}"/
+          cd "$DOCKER_CONFIG_PATH"/
           docker compose down
           docker compose up -d --build
 
