@@ -385,5 +385,117 @@
         }
       ]
     }
+  },
+  "galeria": {
+    "events": [
+      {
+        "id": "Open Day 2026",
+        "name": "Open Day 2026",
+        "photos": [
+          {
+            "id": "OpenDay-p1",
+            "url": "https://drive.google.com/uc?id=19cHxbYkyNWGB_pxG5dnvGXho6mp9aWw9",
+            "alt": "Foto do evento Open Day",
+            "eventName": "Open Day",
+            "location": "CIn - UFPE, Recife",
+            "date": "4/03/2026"
+          },
+          {
+            "id": "OpenDay-p2",
+            "url": "https://drive.google.com/uc?id=1VqT6RCOL-VdZmiUEQARrZzGipyjCwBQj",
+            "alt": "Foto do evento Open Day",
+            "eventName": "Open Day",
+            "location": "CIn - UFPE, Recife",
+            "date": "4/03/2026"
+          },
+          {
+            "id": "OpenDay-p3",
+            "url": "https://drive.google.com/uc?id=1fLCxbNYaWLMUgWYlGXHJxF2JgvjeGP60",
+            "alt": "Foto do evento Open Day",
+            "eventName": "Open Day",
+            "location": "CIn - UFPE, Recife",
+            "date": "4/03/2026"
+          },
+          {
+            "id": "OpenDay-p4",
+            "url": "https://drive.google.com/uc?id=1rQ5EfZtCwIjX0sFm52yRiyJm5kCJC-3I",
+            "alt": "Foto do evento Open Day",
+            "eventName": "Open Day",
+            "location": "CIn - UFPE, Recife",
+            "date": "4/03/2026"
+          },
+          {
+            "id": "OpenDay-p5",
+            "url": "https://drive.google.com/uc?id=1H2qm0Df-W3l6-4ko0X_Ql8t6IecyX-Qq",
+            "alt": "Foto do evento Open Day",
+            "eventName": "Open Day",
+            "location": "CIn - UFPE, Recife",
+            "date": "4/03/2026"
+          },
+          {
+            "id": "OpenDay-p6",
+            "url": "https://drive.google.com/uc?id=1KFbp9L5Wzp9JBKGRLwZTE8q3uT80n6qh",
+            "alt": "Foto do evento Open Day",
+            "eventName": "Open Day",
+            "location": "CIn - UFPE, Recife",
+            "date": "4/03/2026"
+          }
+        ]
+      },
+      {
+        "id": "Integração 2026",
+        "name": "Integração 2026",
+        "photos": [
+          {
+            "id": "Integracao-p1",
+            "url": "https://drive.google.com/uc?id=1YVkJxRZ7-lgAm0xVa2cilIZvwbr-amTt",
+            "alt": "Foto do evento de Integração",
+            "eventName": "Integração",
+            "location": "CIn - UFPE, Recife",
+            "date": "21/06/2026"
+          },
+          {
+            "id": "Integracao-p2",
+            "url": "https://drive.google.com/uc?id=1xxdOCl4rUBt9g0ej01-Xjo-5B-EpnMgK",
+            "alt": "Foto do evento de Integração",
+            "eventName": "Integração",
+            "location": "CIn - UFPE, Recife",
+            "date": "21/06/2026"
+          },
+          {
+            "id": "Integracao-p3",
+            "url": "https://drive.google.com/uc?id=1JVtG5zHL1Uz0y6vLtSgkAPX_-UG9eqAT",
+            "alt": "Foto do evento de Integração",
+            "eventName": "Integração",
+            "location": "CIn - UFPE, Recife",
+            "date": "21/06/2026"
+          },
+          {
+            "id": "Integracao-p4",
+            "url": "https://drive.google.com/uc?id=1FmRn9FchxxC207h3793ItPwwBDq9VUc8",
+            "alt": "Foto do evento de Integração",
+            "eventName": "Integração",
+            "location": "CIn - UFPE, Recife",
+            "date": "21/06/2026"
+          },
+          {
+            "id": "Integracao-p5",
+            "url": "https://drive.google.com/uc?id=1Hv3AvG19kgVwXtO3FJWXPwJEDUv9aYdu",
+            "alt": "Foto do evento de Integração",
+            "eventName": "Integração",
+            "location": "CIn - UFPE, Recife",
+            "date": "21/06/2026"
+          },
+          {
+            "id": "Integracao-p6",
+            "url": "https://drive.google.com/uc?id=1ZaQf2WoiCSXlYtJLcAE87j1oihr_hKYj",
+            "alt": "Foto do evento de Integração",
+            "eventName": "Integração",
+            "location": "CIn - UFPE, Recife",
+            "date": "21/06/2026"
+          }
+        ]
+      }
+    ]
   }
 }

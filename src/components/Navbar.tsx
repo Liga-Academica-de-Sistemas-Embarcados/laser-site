@@ -15,6 +15,7 @@ enum Page {
   Pesquisa = 'Pesquisa',
   Extensao = 'Extensão',
   Membros = 'Membros',
+  Galeria = 'Galeria',
 }
 
 interface NavbarItemProps {
@@ -75,6 +76,7 @@ export function Navbar({ onSidebarOpen, onSidebarClose }: NavbarProps) {
     if (path === '/pesquisa') return Page.Pesquisa;
     if (path === '/extensao') return Page.Extensao;
     if (path === '/membros') return Page.Membros;
+    if (path === '/galeria') return Page.Galeria;
     return null;
   };
 
@@ -98,6 +100,7 @@ export function Navbar({ onSidebarOpen, onSidebarClose }: NavbarProps) {
     [Page.Pesquisa]: '/pesquisa',
     [Page.Extensao]: '/extensao',
     [Page.Membros]: '/membros',
+    [Page.Galeria]: '/galeria',
   };
 
   return (
